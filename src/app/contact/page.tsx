@@ -12,7 +12,7 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
     const body = encodeURIComponent(`From: ${form.name} (${form.email})\n\n${form.message}`);
-    window.location.href = `mailto:sandeep.kurapati@petpooja.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sandy.show18@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -40,7 +40,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-5">
               <AnimatedSection>
-                <a href="mailto:sandeep.kurapati@petpooja.com"
+                <a href="mailto:sandy.show18@gmail.com"
                   className="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.08] card-hover group"
                   style={{ background: "rgba(10,15,30,0.6)" }}>
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(0,212,170,0.1)" }}>
@@ -49,14 +49,14 @@ export default function Contact() {
                   <div>
                     <p className="text-white font-medium text-sm mb-0.5">Email</p>
                     <p className="text-slate-500 text-sm group-hover:text-[#00d4aa] transition-colors">
-                      sandeep.kurapati@petpooja.com
+                      sandy.show18@gmail.com
                     </p>
                   </div>
                 </a>
               </AnimatedSection>
 
               <AnimatedSection delay={0.05}>
-                <a href="https://linkedin.com/in/sandeep-kurapati" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a-5b81b811a" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.08] card-hover group"
                   style={{ background: "rgba(10,15,30,0.6)" }}>
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(0,212,170,0.1)" }}>
@@ -65,7 +65,7 @@ export default function Contact() {
                   <div>
                     <p className="text-white font-medium text-sm mb-0.5">LinkedIn</p>
                     <p className="text-slate-500 text-sm group-hover:text-[#00d4aa] transition-colors">
-                      linkedin.com/in/sandeep-kurapati
+                      linkedin.com/in/sandeep-kurapati-5b81b811a
                     </p>
                   </div>
                 </a>
@@ -112,7 +112,7 @@ export default function Contact() {
                       </div>
                       <h3 className="text-white font-semibold text-lg mb-2">Opening your mail client</h3>
                       <p className="text-slate-400 text-sm mb-4">Your message has been pre-filled. Hit send and I&apos;ll reply within 48 hours.</p>
-                      <p className="text-slate-500 text-[11px]">Or email directly: sandeep.kurapati@petpooja.com</p>
+                      <p className="text-slate-500 text-[11px]">Or email directly: sandy.show18@gmail.com</p>
                     </div>
                   ) : (
                     <>

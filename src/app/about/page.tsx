@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — Senior Product Manager | Restaurant Technology & Merchant Platforms",
   description:
-    "Sandeep Kurapati is a Senior Product Manager specializing in restaurant technology, POS solutions, merchant operations, and commerce platform architecture. 6+ years at Petpooja building POS systems, catalog management infrastructure, integrations platform, and the backend platform serving 60,000+ restaurant outlets across India.",
+    "Sandeep Kurapati is a Senior Product Manager specializing in restaurant technology, POS solutions, merchant operations, and commerce platform architecture. 8+ years at Petpooja building POS systems, catalog management infrastructure, integrations platform, and the backend platform serving 1,00,000+ restaurant outlets across India.",
   keywords: [
     "senior product manager restaurant technology",
     "product manager merchant technology",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://sandeepkurapati.com/about",
     title: "About Sandeep Kurapati — Senior Product Manager | Restaurant Technology",
     description:
-      "Senior Product Manager with 6+ years building restaurant technology, POS solutions, and commerce platforms at Petpooja — India's largest restaurant tech platform. Expertise in merchant technology, restaurant operations, integrations platform, and backend architecture.",
+      "Senior Product Manager with 8+ years building restaurant technology, POS solutions, and commerce platforms at Petpooja — India's largest restaurant tech platform. Expertise in merchant technology, restaurant operations, integrations platform, and backend architecture.",
     firstName: "Sandeep",
     lastName: "Kurapati",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Sandeep Kurapati — Senior Product Manager | Restaurant Technology",
     description:
-      "Senior Product Manager with 6+ years building restaurant technology, POS solutions, and commerce platforms at Petpooja — India's largest restaurant tech platform.",
+      "Senior Product Manager with 8+ years building restaurant technology, POS solutions, and commerce platforms at Petpooja — India's largest restaurant tech platform.",
   },
 };
 
@@ -101,30 +101,35 @@ const experience = [
   {
     role: "Senior Product Manager — Restaurant Technology",
     company: "Petpooja",
-    companyDesc: "India's largest restaurant tech platform · 60,000+ outlets",
-    period: "2022 – Present",
+    companyDesc: "India's largest restaurant tech platform · 1,00,000+ outlets",
+    period: "April 2024 – Present",
     bullets: [
-      "Own product strategy and execution across the full restaurant tech stack — POS, catalog, online ordering, dine-in, multi-brand operations, integration platform, and backend architecture. Operate as de facto Head of Product for the restaurant technology division, setting roadmap direction across 12+ product lines, aligning engineering, design, sales, and operations stakeholders, and onboarding and mentoring junior PMs joining the team.",
-      "Designed the unified order data model that reduced checkout time from 47s to 18s across 4,200 restaurants — by eliminating re-keying between kitchen and billing, not through UI redesign.",
-      "Built catalog infrastructure that propagates a menu change across POS, aggregators, online ordering, and QR menus in under 4 hours for a 200-outlet chain — down from 3 days of manual updates.",
-      "Launched multi-brand operations platform for franchise operators — outlet activation from 3 days to 4 hours, remote-only, with config propagation to all outlets in under 90 seconds.",
-      "Led dine-in technology and QR menu platform — table turn time improved 19% at pilot outlets by moving billing and payment off the critical service path.",
-      "Defined backend platform service decomposition — six independently deployable domains, event-driven backbone, idempotent financial paths. Platform uptime 99.7% (from 98.1%); cascading failures down 82%; new capability build time reduced 40%.",
-      "Navigated a six-month tension between the business team pushing for rapid aggregator expansion and the platform engineering team flagging integration reliability risks. Structured the decision around order acceptance rates and incident frequency data, and presented a sequenced roadmap to CPO: reliability-first for existing integrations, automated onboarding for new ones. Both teams aligned. The approach became the foundation for scaling to 40+ integrations without a reliability regression.",
+      "Own product strategy and execution across the full restaurant tech stack — POS, catalog, online ordering, dine-in, multi-brand operations, integration platform, and backend architecture. Operating as de facto Head of Product for the restaurant technology division.",
+      "Designed the unified order data model that reduced checkout time from 47s to 18s across 4,200 restaurants — eliminating re-keying between kitchen and billing.",
+      "Built catalog infrastructure that propagates menu changes across POS, aggregators, and QR menus in under 4 hours for 200-outlet chains (down from 3 days). Serves 15,000+ outlets.",
+      "Defined backend platform service decomposition — six independently deployable domains. Platform uptime 99.7% (from 98.1%); cascading failures −82%; new capability build time −40%.",
     ],
   },
   {
-    role: "Product Manager — Merchant Solutions & Integration Platform",
+    role: "Product Manager",
     company: "Petpooja",
     companyDesc: "India's largest restaurant tech platform",
-    period: "2020 – 2022",
+    period: "July 2020 – March 2024",
     bullets: [
-      "Built the integration platform that connected Petpooja's POS and catalog to Swiggy, Zomato, and other aggregators — reduced integration onboarding from 6 weeks to 9 days by treating integrations as a product, not a one-off engineering project.",
-      "Built GST standardization product: HSN mapping engine, configurable tax rule system, and GSTR reporting directly from POS data — compliance errors reduced 67% across 10,000+ merchants.",
-      "Owned Android restaurant application product line — billing terminals, KDS, captain order apps, owner dashboards. Designed for constrained hardware, flaky networks, and operators who cannot stop service to troubleshoot. Crash-free session rate 99.1% across 8,500+ devices.",
-      "Built finance enablement layer: settlement engine, reconciliation, payout tracking, and merchant-facing financial reporting — settlement support tickets reduced 41%.",
-      "Reduced merchant support volume 28% by redesigning operational dashboards around the questions operators actually ask — exception-based views replaced surface-level metrics, cutting time-to-insight for outlet managers.",
-      "Managed competing demands between finance operations (requiring granular settlement reporting across 40+ bank scenarios) and engineering (flagging scope risk). Resolved by defining a phase-1 reconciliation contract covering 85% of settlement scenarios, shipping it first, and using the 41% ticket reduction it delivered to de-prioritise remaining edge cases. Both stakeholders got what they needed — in the right sequence.",
+      "Built integration platform connecting POS and catalog to Swiggy, Zomato, and 40+ aggregators — onboarding from 6 weeks to 9 days.",
+      "Built GST standardization product and finance enablement layer — compliance errors −67% across 10,000+ merchants; settlement support tickets −41%.",
+      "Owned Android restaurant application product line across 8,500+ devices — 99.1% crash-free session rate.",
+    ],
+  },
+  {
+    role: "BDE → Operations Manager",
+    company: "Petpooja",
+    companyDesc: "India's largest restaurant tech platform",
+    period: "February 2018 – June 2020",
+    bullets: [
+      "Progressed from sales to operations leadership before transitioning into product management, building strong commercial understanding and execution discipline.",
+      "Led operational execution, onboarding systems, and cross-team coordination.",
+      "Monitored staff performance and developed improvement plans.",
     ],
   },
 ];
@@ -139,7 +144,7 @@ export default function About() {
               <AnimatedSection>
                 <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-4">About Me</p>
                 <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-                  Six years building the operating system for restaurants at scale.
+                  Eight years building the operating system for restaurants at scale.
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
@@ -169,10 +174,10 @@ export default function About() {
                     {[
                       { label: "Role", value: "Senior Product Manager" },
                       { label: "Company", value: "Petpooja — India's largest restaurant tech platform" },
-                      { label: "Scale", value: "60,000+ restaurant outlets across India" },
+                      { label: "Scale", value: "1,00,000+ restaurant outlets across India" },
                       { label: "Domain", value: "Restaurant Technology · Commerce · Platform Architecture" },
                       { label: "Specialisms", value: "POS · Catalog · Multi-brand · Integration · Android" },
-                      { label: "Years in Product", value: "6 years" },
+                      { label: "Years at Petpooja", value: "8+ years" },
                       { label: "Location", value: "India · Open to remote and relocation" },
                       { label: "Target Role", value: "Group PM · Head of Product · Senior PM" },
                     ].map(({ label, value }) => (

@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatedSection } from "@/components/AnimatedSection";
+import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -17,6 +18,7 @@ type CaseStudy = {
   title: string;
   category: string;
   summary: string;
+  image?: string;
   metrics: { label: string; value: string }[];
   tags: string[];
   sections: Section[];
@@ -37,6 +39,7 @@ const caseStudies: CaseStudy[] = [
       { label: "Outlets on catalog", value: "15,000+" },
     ],
     tags: ["Catalog", "Menu Management", "Multi-channel", "Data Architecture"],
+    image: "/images/catalog-management-architecture.png",
     sections: [
       {
         title: "Executive Summary",
@@ -221,6 +224,7 @@ const caseStudies: CaseStudy[] = [
       { label: "Manual reconciliation time", value: "−60%" },
     ],
     tags: ["GST", "Compliance", "Tax", "Merchant Enablement"],
+    image: "/images/gst-standardization-workflow.png",
     sections: [
       {
         title: "Executive Summary",
@@ -239,7 +243,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         title: "Market Context",
-        content: "The Indian government's GST implementation for restaurants went through multiple amendments between 2017 and 2021 — changing slab assignments, clarifying composite scheme rules, and introducing new reporting requirements. Restaurant owners were navigating a moving regulatory target without dedicated tax support. Petpooja serving 60,000+ outlets was in a position to solve this at scale: one well-designed compliance system benefiting every merchant on the platform, rather than each restaurant independently navigating the same complexity.",
+        content: "The Indian government's GST implementation for restaurants went through multiple amendments between 2017 and 2021 — changing slab assignments, clarifying composite scheme rules, and introducing new reporting requirements. Restaurant owners were navigating a moving regulatory target without dedicated tax support. Petpooja serving 1,00,000+ outlets was in a position to solve this at scale: one well-designed compliance system benefiting every merchant on the platform, rather than each restaurant independently navigating the same complexity.",
       },
       {
         title: "Product Vision",
@@ -401,6 +405,7 @@ const caseStudies: CaseStudy[] = [
       { label: "Pay-at-table adoption", value: "68% of dine-in bills" },
     ],
     tags: ["Dine-in", "QR Menu", "Contactless Ordering", "Table Management"],
+    image: "/images/qr-menu-platform.png",
     sections: [
       {
         title: "Executive Summary",
@@ -761,6 +766,7 @@ const caseStudies: CaseStudy[] = [
       { label: "Services deployed independently", value: "6 domains" },
     ],
     tags: ["Platform Architecture", "Scalability", "Reliability", "Service Design"],
+    image: "/images/backend-platform-architecture.png",
     sections: [
       {
         title: "Executive Summary",
@@ -856,8 +862,20 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
       {/* Header — always visible */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left p-7 sm:p-8"
+        className="w-full text-left"
       >
+        {cs.image && (
+          <div className="relative w-full overflow-hidden rounded-t-2xl" style={{ height: "200px" }}>
+            <Image
+              src={cs.image}
+              alt={`${cs.title} architecture diagram`}
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(10,15,30,0.8) 100%)" }} />
+          </div>
+        )}
+        <div className="p-7 sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-start gap-5 flex-1 min-w-0">
             <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(0,212,170,0.08)" }}>
@@ -889,6 +907,7 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
               {tag}
             </span>
           ))}
+        </div>
         </div>
       </button>
 

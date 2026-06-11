@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Senior Product Manager with 6+ years building restaurant technology, POS solutions, catalog management systems, and commerce platforms at Petpooja — India's largest restaurant tech platform serving 60,000+ outlets. Open to Group PM and Head of Product roles.",
+    "Senior Product Manager with 8+ years building restaurant technology, POS solutions, catalog management systems, and commerce platforms at Petpooja — India's largest restaurant tech platform serving 1,00,000+ outlets. Open to Group PM and Head of Product roles.",
 
   keywords: [
     // Primary
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title:
       "Sandeep Kurapati — Senior Product Manager | Restaurant Technology & POS Solutions",
     description:
-      "Senior Product Manager who built the full restaurant technology ecosystem at Petpooja — POS solutions, catalog management, online ordering, dine-in technology, integrations platform, and backend architecture serving 60,000+ outlets.",
+      "Senior Product Manager who built the full restaurant technology ecosystem at Petpooja — POS solutions, catalog management, online ordering, dine-in technology, integrations platform, and backend architecture serving 1,00,000+ outlets.",
     firstName: "Sandeep",
     lastName: "Kurapati",
   },
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     title:
       "Sandeep Kurapati — Senior Product Manager | Restaurant Technology & POS Solutions",
     description:
-      "Senior Product Manager who built the full restaurant technology ecosystem at Petpooja — POS solutions, catalog management, online ordering, dine-in technology, integrations platform, and backend architecture serving 60,000+ outlets.",
+      "Senior Product Manager who built the full restaurant technology ecosystem at Petpooja — POS solutions, catalog management, online ordering, dine-in technology, integrations platform, and backend architecture serving 1,00,000+ outlets.",
   },
 
   robots: {
@@ -121,9 +121,9 @@ const structuredData = {
       url: SITE_URL,
       jobTitle: "Senior Product Manager",
       description:
-        "Senior Product Manager with 6+ years specializing in restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology. Built 12+ products at Petpooja serving 60,000+ restaurant outlets.",
-      email: "sandeep.kurapati@petpooja.com",
-      sameAs: ["https://linkedin.com/in/sandeep-kurapati"],
+        "Senior Product Manager with 8+ years specializing in restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology. Built 12+ products at Petpooja serving 1,00,000+ restaurant outlets.",
+      email: "sandy.show18@gmail.com",
+      sameAs: ["https://www.linkedin.com/in/sandeep-kurapati-5b81b811a"],
       image: `${SITE_URL}/og-image.png`,
       worksFor: {
         "@type": "Organization",
@@ -131,7 +131,7 @@ const structuredData = {
         name: "Petpooja",
         url: "https://petpooja.com",
         description:
-          "India's largest restaurant technology platform — POS solutions, catalog management, online ordering, and commerce infrastructure serving 60,000+ outlets.",
+          "India's largest restaurant technology platform — POS solutions, catalog management, online ordering, and commerce infrastructure serving 1,00,000+ outlets.",
       },
       hasOccupation: {
         "@type": "Occupation",

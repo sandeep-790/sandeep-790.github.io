@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Layers, Settings, Zap, TrendingUp } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -59,7 +60,7 @@ const productDomains = [
 ];
 
 const heroMetrics = [
-  { value: "60,000+", label: "Restaurant outlets", sub: "Petpooja platform" },
+  { value: "1,00,000+", label: "Restaurant outlets", sub: "Petpooja platform" },
   { value: "12+",     label: "Product lines owned", sub: "Full end-to-end ownership" },
   { value: "47s→18s", label: "POS checkout time", sub: "Data model redesign" },
   { value: "3d→4hr",  label: "Menu propagation", sub: "Automated multi-channel sync" },
@@ -159,36 +160,28 @@ const techExpertise = [
 
 const careerMilestones = [
   {
+    year: "2018",
+    period: "Foundation",
+    title: "BDE → Operations Manager",
+    company: "Petpooja",
+    description: "Started in business development and progressed to operations leadership. Built strong commercial understanding, onboarding systems, and cross-team execution discipline before transitioning into product management.",
+    highlights: ["Progressed from sales to operations leadership", "Led operational execution and onboarding systems", "Developed cross-team coordination and commercial acumen"],
+  },
+  {
     year: "2020",
-    period: "Early career",
-    title: "Product Manager — Merchant Solutions",
+    period: "Product career",
+    title: "Product Manager",
     company: "Petpooja",
-    description: "Joined to own merchant-facing tools and the integration platform. First products: GST compliance system, finance enablement layer, EDC and payment infrastructure.",
-    highlights: ["GST standardization — 67% compliance error reduction", "Integration platform — 6 wks → 9 days onboarding", "Finance enablement — 41% settlement ticket reduction"],
+    description: "Transitioned into product to own merchant-facing tools, the integration platform, GST compliance system, finance enablement, and the Android restaurant application fleet.",
+    highlights: ["GST standardization — 67% compliance error reduction", "Integration platform — 6 wks → 9 days onboarding", "Android fleet: 99.1% crash-free rate across 8,500+ devices"],
   },
   {
-    year: "2021",
-    period: "Expanding scope",
-    title: "Product Manager — Android & Finance",
-    company: "Petpooja",
-    description: "Took ownership of the Android restaurant application fleet — billing terminals, KDS, captain apps. Built the OTA update channel and fleet monitoring infrastructure for 8,500+ devices.",
-    highlights: ["Android fleet: 99.1% crash-free rate across 8,500+ devices", "OTA update channel: 95% coverage in 48 hrs", "Proactive fleet alerting: issue detection cut from hours to minutes"],
-  },
-  {
-    year: "2022",
-    period: "Promotion",
+    year: "2024",
+    period: "Present",
     title: "Senior Product Manager — Restaurant Technology",
     company: "Petpooja",
-    description: "Promoted to lead the full restaurant technology stack. Took on POS, catalog, online ordering, dine-in, multi-brand operations, and the backend platform architecture.",
-    highlights: ["POS ecosystem: 47s → 18s checkout across 4,200 outlets", "Catalog platform: 3 days → 4 hrs propagation", "Multi-brand: 3 days → 4 hrs outlet activation"],
-  },
-  {
-    year: "2023–24",
-    period: "Present",
-    title: "Senior Product Manager — Full Stack",
-    company: "Petpooja",
-    description: "Defined backend platform service decomposition. Launched QR menu and dine-in platform. Online ordering ecosystem with zero-touch aggregator acceptance. 60,000+ outlets across all products.",
-    highlights: ["Platform uptime 99.7% (from 98.1%), cascading failures −82%", "QR dine-in: 19% table turn improvement", "Online ordering: 99.4% auto-acceptance"],
+    description: "Lead the full restaurant technology stack — POS, catalog, online ordering, dine-in, multi-brand, integration platform, and backend architecture. Operating as de facto Head of Product for the division. 1,00,000+ outlets across all products.",
+    highlights: ["POS ecosystem: 47s → 18s checkout across 4,200 outlets", "Catalog platform: 3 days → 4 hrs propagation", "Platform uptime 99.7% (from 98.1%), cascading failures −82%"],
   },
 ];
 
@@ -250,7 +243,7 @@ export default function Home() {
                 transition={{ duration: 0.55, delay: 0.16 }}
                 className="text-slate-300 text-lg leading-[1.8] mb-8 max-w-xl"
               >
-                Six years at Petpooja — India&apos;s largest restaurant tech platform — building the technology ecosystem serving 60,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
+                Eight years at Petpooja — India&apos;s largest restaurant tech platform — building the technology ecosystem serving 1,00,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
               </motion.p>
 
               <motion.p
@@ -279,13 +272,23 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* ── Right column — metrics card ── */}
+            {/* ── Right column — hero image + metrics card ── */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.35 }}
               className="hidden lg:block"
             >
+              <div className="space-y-4">
+              <div className="relative rounded-2xl overflow-hidden border border-white/[0.09]" style={{ height: "220px" }}>
+                <Image
+                  src="/images/hero-platform-topology.png"
+                  alt="Platform topology diagram showing Petpooja's restaurant technology ecosystem — POS, catalog, ordering, integrations, and finance layers"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               <div className="rounded-2xl border border-white/[0.09] overflow-hidden" style={{ background: cardBg }}>
                 {/* Card header */}
                 <div className="flex items-center gap-2 px-5 py-4 border-b border-white/[0.06]">
@@ -306,6 +309,7 @@ export default function Home() {
                 <div className="px-5 py-3.5 border-t border-white/[0.06]">
                   <p className="text-slate-600 text-[11px]">Restaurant Technology · Commerce Platforms · Platform Architecture</p>
                 </div>
+              </div>
               </div>
             </motion.div>
 
@@ -337,7 +341,7 @@ export default function Home() {
               <div className="space-y-2.5">
                 {[
                   { label: "Current Role", value: "Senior Product Manager, Petpooja" },
-                  { label: "Company", value: "India's largest restaurant tech platform · 60,000+ outlets" },
+                  { label: "Company", value: "India's largest restaurant tech platform · 1,00,000+ outlets" },
                   { label: "Scope", value: "POS · Catalog · Ordering · Multi-brand · Platform Architecture" },
                   { label: "Location", value: "India · Open to remote and relocation" },
                   { label: "Target Role", value: "Group PM · Head of Product · Senior PM" },
@@ -514,8 +518,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Career Journey</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] mb-4">Six years of compounding scope.</h2>
-            <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-2xl">Petpooja scaled from a regional tool to India&apos;s largest restaurant tech platform during my tenure — the product complexity compounded with every year. I&apos;ve operated as de facto Head of Product for the restaurant technology division.</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] mb-4">Eight years of compounding scope.</h2>
+            <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-2xl">Petpooja scaled from a regional tool to India&apos;s largest restaurant tech platform during my tenure — starting in sales, moving through operations, and into product. I&apos;ve operated as de facto Head of Product for the restaurant technology division.</p>
           </AnimatedSection>
 
           <div className="space-y-3">
@@ -592,9 +596,9 @@ export default function Home() {
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] text-sm font-semibold hover:bg-[#00c49e] transition-colors duration-200">
                       Get in touch <ArrowRight size={15} />
                     </Link>
-                    <a href="mailto:sandeep.kurapati@petpooja.com"
+                    <a href="mailto:sandy.show18@gmail.com"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all duration-200">
-                      sandeep.kurapati@petpooja.com
+                      sandy.show18@gmail.com
                     </a>
                   </div>
                 </div>

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://sandeepkurapati.com/projects",
     title: "Products — Restaurant POS, Catalog Management & Commerce Platform Portfolio",
     description:
-      "12+ restaurant technology products built at Petpooja — POS solutions, catalog management systems, online ordering ecosystems, integrations platform, Android restaurant applications, and backend platform architecture serving 60,000+ outlets.",
+      "12+ restaurant technology products built at Petpooja — POS solutions, catalog management systems, online ordering ecosystems, integrations platform, Android restaurant applications, and backend platform architecture serving 1,00,000+ outlets.",
   },
   twitter: {
     card: "summary_large_image",

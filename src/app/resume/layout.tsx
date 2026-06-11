@@ -7,7 +7,7 @@ const resumeStructuredData = {
   url: `${SITE_URL}/resume`,
   name: "Resume — Sandeep Kurapati | Senior Product Manager | Restaurant Technology & POS Solutions",
   description:
-    "Professional resume of Sandeep Kurapati, Senior Product Manager with 6+ years building restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology. Open to Group PM, Head of Product, and Senior PM roles.",
+    "Professional resume of Sandeep Kurapati, Senior Product Manager with 8+ years building restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology. Open to Group PM, Head of Product, and Senior PM roles.",
   isPartOf: { "@id": `${SITE_URL}/#website` },
   about: { "@id": `${SITE_URL}/#person` },
   breadcrumb: {
@@ -28,13 +28,13 @@ const resumeStructuredData = {
     name: "Sandeep Kurapati",
     jobTitle: "Senior Product Manager",
     description:
-      "Senior Product Manager specializing in restaurant technology, POS solutions, commerce platforms, merchant technology, and platform architecture. 6+ years at Petpooja building 12+ products serving 60,000+ restaurant outlets.",
+      "Senior Product Manager specializing in restaurant technology, POS solutions, commerce platforms, merchant technology, and platform architecture. 8+ years at Petpooja building 12+ products serving 1,00,000+ restaurant outlets.",
     hasCredential: [
       {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "experience",
         description:
-          "6+ years as Senior Product Manager at Petpooja — restaurant technology, POS solutions, catalog management, integrations platform, Android applications, and backend systems",
+          "8+ years as Senior Product Manager at Petpooja — restaurant technology, POS solutions, catalog management, integrations platform, Android applications, and backend systems",
       },
     ],
     seeks: {

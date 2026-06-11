@@ -7,7 +7,7 @@ const aboutStructuredData = {
   url: `${SITE_URL}/about`,
   name: "About Sandeep Kurapati — Senior Product Manager | Restaurant Technology & Merchant Platforms",
   description:
-    "About Sandeep Kurapati, Senior Product Manager with 6+ years building restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology at Petpooja.",
+    "About Sandeep Kurapati, Senior Product Manager with 8+ years building restaurant technology, POS solutions, catalog management systems, commerce platforms, and merchant technology at Petpooja.",
   isPartOf: { "@id": `${SITE_URL}/#website` },
   about: { "@id": `${SITE_URL}/#person` },
   breadcrumb: {

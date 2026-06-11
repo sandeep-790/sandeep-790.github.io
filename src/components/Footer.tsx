@@ -42,10 +42,10 @@ export function Footer() {
             © {new Date().getFullYear()} Sandeep Kurapati. All rights reserved.
           </p>
           <a
-            href="mailto:sandeep.kurapati@petpooja.com"
+            href="mailto:sandy.show18@gmail.com"
             className="text-[#00d4aa]/60 hover:text-[#00d4aa] text-xs transition-colors"
           >
-            sandeep.kurapati@petpooja.com
+            sandy.show18@gmail.com
           </a>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ExternalLink, Mail } from "lucide-react";
 export const metadata: Metadata = {
   title: "Resume — Senior Product Manager | Restaurant Technology | Open to Group PM & Head of Product",
   description:
-    "Resume of Sandeep Kurapati — Senior Product Manager with 6+ years in restaurant technology, POS solutions, commerce platforms, and merchant technology at Petpooja. Open to Group Product Manager, Head of Product, and Senior PM roles. Expertise in restaurant operations, catalog management, integrations platform, android applications, and backend systems. Remote and relocation considered.",
+    "Resume of Sandeep Kurapati — Senior Product Manager with 8+ years in restaurant technology, POS solutions, commerce platforms, and merchant technology at Petpooja. Open to Group Product Manager, Head of Product, and Senior PM roles. Expertise in restaurant operations, catalog management, integrations platform, android applications, and backend systems. Remote and relocation considered.",
   keywords: [
     "senior product manager resume",
     "product manager restaurant technology",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://sandeepkurapati.com/resume",
     title: "Resume — Sandeep Kurapati | Senior Product Manager | Restaurant Technology & POS",
     description:
-      "Senior Product Manager resume — 6+ years building restaurant technology, POS solutions, catalog management, commerce platforms, and merchant technology at Petpooja. Open to Group PM and Head of Product roles.",
+      "Senior Product Manager resume — 8+ years building restaurant technology, POS solutions, catalog management, commerce platforms, and merchant technology at Petpooja. Open to Group PM and Head of Product roles.",
     firstName: "Sandeep",
     lastName: "Kurapati",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Resume — Sandeep Kurapati | Senior Product Manager | Restaurant Technology",
     description:
-      "Senior Product Manager — 6+ years in restaurant technology, POS solutions, and commerce platforms. Open to Group PM and Head of Product roles.",
+      "Senior Product Manager — 8+ years in restaurant technology, POS solutions, and commerce platforms. Open to Group PM and Head of Product roles.",
   },
 };
 
@@ -50,34 +50,40 @@ const experience = [
   {
     role: "Senior Product Manager — Restaurant Technology",
     company: "Petpooja",
-    companyDesc: "India's largest restaurant tech platform · 60,000+ outlets",
-    period: "2022 – Present",
+    companyDesc: "India's largest restaurant tech platform · 1,00,000+ outlets",
+    period: "April 2024 – Present",
     summary:
-      "Full product ownership across the restaurant technology stack — POS, catalog, online ordering, dine-in, multi-brand operations, integration platform, and the backend service architecture that connects them. Operated as de facto Head of Product for the restaurant technology division, setting cross-portfolio roadmap direction, aligning engineering and business stakeholders, and mentoring junior PMs. These products share data and infrastructure; a decision in one affects all the others.",
+      "Full product ownership across the restaurant technology stack — POS, catalog, online ordering, dine-in, multi-brand operations, integration platform, and the backend service architecture that connects them. Operating as de facto Head of Product for the restaurant technology division.",
     bullets: [
-      "Designed the unified order data model for the restaurant POS — billing, KOT routing, table management, menu, and payment operating on a single record. Checkout time fell from 47s to 18s across 4,200 outlets; billing errors dropped 34% by eliminating re-keying between kitchen and billing systems.",
-      "Built catalog infrastructure that propagates menu changes to POS, Swiggy, Zomato, web ordering, and QR menus in under 4 hours for 200-outlet chains. Previously required 3 days of manual aggregator updates. Now serves 15,000+ outlets as the single source of truth across all channels.",
-      "Launched multi-brand operations platform for restaurant groups and franchise operators. Org → brand → outlet → channel hierarchy with role-based access and config inheritance. New outlet activation from 3 days to 4 hours — remote, no site visit required. Config changes propagate to all outlets in under 90 seconds.",
-      "Led dine-in technology and QR menu platform — contactless ordering, table-side digital menus, pay-at-table. Table turn time improved 19% at pilot outlets by removing billing and payment from the critical service path. 2M+ sessions per month.",
-      "Owned integration platform connecting POS and catalog to Swiggy, Zomato, and 40+ third-party systems — versioned APIs, webhooks, sandbox environments. Integration onboarding from 6 weeks to 9 days by treating third-party integration as a repeatable product, not a custom engineering engagement.",
-      "Defined backend platform service decomposition — POS, catalog, ordering, merchant, finance, devices — each independently deployable. Event-driven backbone with idempotent financial paths. Platform uptime 99.7% (up from 98.1%); cascading failures down 82%; new capability build time reduced 40%.",
-      "Navigated a six-month conflict between the business team prioritising rapid aggregator expansion and platform engineering flagging reliability risk. Presented a sequenced roadmap to CPO with concrete data — order acceptance rates, incident frequency, merchant escalation volume. Both teams aligned. Integration count scaled from 10 to 40+ without a reliability regression.",
+      "Designed the unified order data model for the restaurant POS — billing, KOT routing, table management, menu, and payment on a single record. Checkout time fell from 47s to 18s across 4,200 outlets; billing errors dropped 34%.",
+      "Built catalog infrastructure propagating menu changes to POS, aggregators, and QR menus in under 4 hours for 200-outlet chains (down from 3 days). Serves 15,000+ outlets as single source of truth.",
+      "Owned integration platform connecting POS and catalog to 40+ third-party systems — onboarding from 6 weeks to 9 days with versioned APIs, webhooks, and sandbox environments.",
+      "Defined backend platform service decomposition — six independently deployable domains, event-driven backbone, idempotent financial paths. Platform uptime 99.7% (from 98.1%); cascading failures −82%; new capability build time −40%.",
     ],
   },
   {
-    role: "Product Manager — Merchant Solutions & Integration Platform",
+    role: "Product Manager",
     company: "Petpooja",
     companyDesc: "India's largest restaurant tech platform",
-    period: "2020 – 2022",
+    period: "July 2020 – March 2024",
     summary:
-      "Merchant-facing tooling, finance enablement, GST compliance system, and Android restaurant application product line. The common thread: software used under operational pressure, where reliability matters more than feature richness.",
+      "Merchant-facing tooling, finance enablement, GST compliance, and Android restaurant application product line.",
     bullets: [
-      "Built GST standardization product — HSN code mapping engine, configurable tax rule system, GSTR reporting directly from POS transaction data. Compliance errors reduced 67% across 10,000+ merchants. Merchants can now trace every tax line from transaction to GSTR return without manual consolidation.",
-      "Built finance enablement layer: settlement engine with full audit trail, reconciliation matching POS transactions to bank settlements, merchant-facing payout visibility dashboard. Settlement support tickets fell 41%. Auto-reconciled 89% of exceptions without manual intervention.",
-      "Owned Android restaurant application product line — billing terminals, KDS, captain order apps, and management dashboards. Designed for constrained hardware, flaky networks, and operators who cannot pause service to troubleshoot. Crash-free session rate 99.1% across 8,500+ active devices; proactive fleet alerting cut issue detection from hours to minutes.",
-      "Built payment infrastructure as a component within the broader merchant technology stack — UPI success rate to 97.4% through health-aware routing; QR payments with under 2s confirmation; EDC integration across 8,500+ terminals.",
-      "Reduced merchant support volume 28% by redesigning operational dashboards around the questions operators actually ask — exception-based views replaced surface-level metrics, cutting time-to-insight for outlet managers and reducing escalations to the central ops team.",
-      "Managed competing stakeholder demands between finance operations (requiring granular settlement reporting across 40+ bank scenarios) and engineering (flagging scope risk). Defined a phase-1 reconciliation contract covering 85% of scenarios, shipped it first, and used the 41% ticket reduction to justify sequencing the remaining edge cases. Both stakeholders got what they needed — in the right order.",
+      "Built GST standardization product — HSN mapping engine, configurable tax rule system, GSTR reporting from POS transaction data. Compliance errors −67% across 10,000+ merchants.",
+      "Built finance enablement layer: settlement engine, reconciliation, payout visibility. Settlement support tickets −41%; 89% of exceptions auto-reconciled.",
+      "Owned Android restaurant application product line — billing terminals, KDS, captain order apps across 8,500+ active devices; 99.1% crash-free session rate.",
+    ],
+  },
+  {
+    role: "BDE → Operations Manager",
+    company: "Petpooja",
+    companyDesc: "India's largest restaurant tech platform",
+    period: "February 2018 – June 2020",
+    summary:
+      "Progressed from sales to operations leadership before transitioning into product management, building strong commercial understanding and execution discipline.",
+    bullets: [
+      "Led operational execution, onboarding systems, and cross-team coordination before transitioning to Product.",
+      "Monitored staff performance and developed improvement plans.",
     ],
   },
 ];
@@ -118,15 +124,15 @@ export default function Resume() {
                 <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-4">Resume</p>
                 <h1 className="text-4xl sm:text-5xl font-bold text-white mb-2">Sandeep Kurapati</h1>
                 <p className="text-slate-400 text-lg">Senior Product Manager · Restaurant Technology & Commerce Platforms</p>
-                <p className="text-slate-500 text-sm mt-1">Petpooja · India · 6 years in product</p>
+                <p className="text-slate-500 text-sm mt-1">Petpooja · India · 8+ years at Petpooja</p>
                 <p className="text-[#00d4aa]/80 text-sm mt-2 font-medium">Open to: Group PM · Head of Product · Senior PM · Remote and relocation considered</p>
               </div>
               <div className="flex flex-col gap-3 flex-shrink-0">
-                <a href="mailto:sandeep.kurapati@petpooja.com"
+                <a href="mailto:sandy.show18@gmail.com"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold text-sm hover:bg-[#00b891] transition-all">
                   <Mail size={15} /> Email me directly
                 </a>
-                <a href="https://linkedin.com/in/sandeep-kurapati" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all">
                   <ExternalLink size={15} /> LinkedIn
                 </a>
@@ -143,7 +149,7 @@ export default function Resume() {
             <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Professional Summary</h2>
             <div className="max-w-3xl p-6 rounded-2xl border border-white/[0.08]" style={{ background: "rgba(10,15,30,0.6)" }}>
               <p className="text-slate-300 leading-relaxed">
-                Six years at Petpooja building the restaurant technology stack that now serves 60,000+ outlets across India. I&apos;ve owned product at every layer: the POS and kitchen operations systems restaurants run on daily, the catalog infrastructure that keeps menus in sync across every channel, the online ordering and dine-in products guests interact with, the multi-brand operations platform franchise groups depend on, the integration platform wiring Petpooja to aggregators and hardware, and the backend service architecture underpinning it all.
+                Eight years at Petpooja — progressing from BDE to Operations Manager to Senior Product Manager — building the restaurant technology stack that now serves 1,00,000+ outlets across India. I&apos;ve owned product at every layer: the POS and kitchen operations systems restaurants run on daily, the catalog infrastructure that keeps menus in sync across every channel, the online ordering and dine-in products guests interact with, the multi-brand operations platform franchise groups depend on, the integration platform wiring Petpooja to aggregators and hardware, and the backend service architecture underpinning it all.
               </p>
               <p className="text-slate-300 leading-relaxed mt-4">
                 My edge is the ability to hold the full system in mind while making decisions at the product level. A catalog data model isn&apos;t just a schema — it determines how fast a chain can push a price change, whether an aggregator sees the right availability, and how a brand manager controls outlets across the country. I design for those downstream consequences, not just the immediate feature. I can write a system design document in the morning and a merchant-facing product spec in the afternoon.
@@ -161,7 +167,7 @@ export default function Resume() {
             <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Selected Impact</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { value: "60,000+", label: "Restaurant outlets on platform", sub: "Petpooja, India" },
+                { value: "1,00,000+", label: "Restaurant outlets on platform", sub: "Petpooja, India" },
                 { value: "47s → 18s", label: "POS checkout time", sub: "4,200 outlets, data model redesign" },
                 { value: "3 days → 4 hrs", label: "Menu propagation time", sub: "200-outlet chains, automated sync" },
                 { value: "98.1% → 99.7%", label: "Platform uptime", sub: "−82% cascading failures, 6-domain decomposition" },
@@ -265,7 +271,7 @@ export default function Resume() {
                   </li>
                 ))}
               </ul>
-              <a href="mailto:sandeep.kurapati@petpooja.com" className="inline-flex items-center gap-1 text-[#00d4aa] text-sm hover:underline">
+              <a href="mailto:sandy.show18@gmail.com" className="inline-flex items-center gap-1 text-[#00d4aa] text-sm hover:underline">
                 Request references — typically available within one business day →
               </a>
             </div>
