@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const SITE_URL = "https://sandeepkurapati.com";
 const LAST_MODIFIED = new Date("2026-06-11");
 
