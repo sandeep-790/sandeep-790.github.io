@@ -149,19 +149,16 @@ export default function About() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <p className="text-slate-300 text-lg leading-[1.8] mb-5">
-                  I&apos;m Sandeep — Senior PM at Petpooja, India&apos;s largest restaurant tech platform. I came in as a product manager and ended up owning the full stack: the POS that processes orders during the lunch rush, the catalog system that keeps 15,000 outlets in sync across every aggregator, the integration platform that wires third-party systems together without custom engineering for each one, and the backend service architecture that underpins all of it.
+                  I&apos;m Sandeep — Senior PM at Petpooja, India&apos;s largest restaurant tech platform. Over 8 years I&apos;ve ended up owning the full stack: the POS that processes orders during the lunch rush, the catalog system keeping 15,000 outlets in sync across every aggregator, the integration platform wiring third-party systems together, and the backend architecture underpinning all of it.
                 </p>
                 <p className="text-slate-300 text-lg leading-[1.8] mb-5">
-                  Most restaurant tech is built as a collection of disconnected tools. A menu update in the POS doesn&apos;t reach the aggregator. A price change at brand HQ takes three days to reach outlet 47. An order from Zomato has to be manually entered into the kitchen system. The problems aren&apos;t product problems — they&apos;re integration problems, disguised as product problems. I build the connections, not just the surfaces.
+                  Most restaurant tech is built as disconnected tools. A menu update in the POS doesn&apos;t reach the aggregator. A price change at brand HQ takes three days to reach outlet 47. The problems aren&apos;t product problems — they&apos;re integration problems disguised as product problems. I build the connections, not just the surfaces.
                 </p>
                 <p className="text-slate-300 text-lg leading-[1.8] mb-5">
-                  I&apos;ve built software used by single-outlet independents and by franchise operators managing 200 locations from one dashboard. Both need reliability above everything else. An owner during a Friday night rush doesn&apos;t want features — they want the system to stay on, respond on the first tap, and not lose an order. That constraint shapes every design decision I make.
-                </p>
-                <p className="text-slate-300 text-lg leading-[1.8] mb-5">
-                  I&apos;ve also been wrong in ways that mattered. I built a permission model that was technically elegant — roles and scopes, inheritance, clean separation of concerns. Then three operators in the pilot rejected it because an outlet manager couldn&apos;t mark an item out of stock without brand-level approval. The model solved the wrong problem at the wrong granularity. I rebuilt it around the actual operational decision — who needs to act, how fast, under what constraints. It&apos;s faster at questioning my own first drafts now.
+                  I&apos;ve built software for single-outlet independents and franchise operators managing 200 locations from one dashboard. Both need reliability above everything else. An owner during a Friday night rush doesn&apos;t want features — they want the system to stay on and not lose an order. That constraint shapes every design decision I make.
                 </p>
                 <p className="text-slate-300 text-lg leading-[1.8]">
-                  The problems I&apos;ve solved aren&apos;t unique to restaurants. Hierarchical data models that propagate across a franchise network are the same problem as product catalogs at a retail chain. Offline-first systems for unreliable field hardware are the same problem as point-of-care software in healthcare. Integration platforms built on adapter patterns work identically whether the ecosystem is food aggregators or payment providers. The domain is restaurants — the problems are about scale, reliability, and operational complexity. Those transfer.
+                  I&apos;ve also been wrong in ways that mattered. A permission model I designed was technically elegant — roles, scopes, clean separation. Then three pilot operators rejected it because an outlet manager couldn&apos;t mark an item out of stock without brand-level approval. I rebuilt it around the actual operational decision. I&apos;m faster at questioning my own first drafts now.
                 </p>
               </AnimatedSection>
             </div>
@@ -213,15 +210,15 @@ export default function About() {
             {[
               {
                 title: "Context over instructions.",
-                body: "I share the why behind every prioritisation call — the operator behaviour, the business constraint, the system dependency. When I pulled QR menu item-level customisation from the launch scope three weeks before go-live, I sent the full operator research to every engineer on the squad. Two flagged a data model edge case I hadn't caught, because they understood why we were removing the feature, not just what was changing.",
+                body: "I share the why behind every prioritisation call. When I pulled QR menu customisation from scope three weeks before go-live, I sent the full operator research to the engineering squad — two engineers flagged a data model edge case I hadn't caught, because they understood the reasoning, not just the decision.",
               },
               {
                 title: "Roadmaps are hypotheses, not commitments.",
-                body: "I've shelved roadmap items four weeks from shipping. When pilot data showed QR ordering shifted server workload rather than reducing it, I re-scoped before full rollout and defended that call to business stakeholders with the data. Shipping something we knew wouldn't move the metric was harder to justify than the delay.",
+                body: "I've shelved roadmap items four weeks from shipping. When pilot data showed QR ordering shifted server workload rather than reducing it, I re-scoped and defended that call with data. Shipping something we knew wouldn't move the metric was harder to justify than the delay.",
               },
               {
                 title: "The spec is the last artefact, not the first.",
-                body: "The POS redesign spec was 18 pages. I wrote it after two weeks in restaurants during service, six months of support ticket analysis, and an architecture session with the engineering lead. It came back from build with zero scope reworks. That ratio is what the pre-spec process buys — and it's the argument I make to every engineering partner who wants the spec first.",
+                body: "The POS redesign spec was 18 pages — written after two weeks in restaurants during service, six months of support ticket analysis, and an architecture session with engineering. It came back with zero scope reworks. The pre-spec process is what buys that ratio.",
               },
             ].map((item) => (
               <AnimatedSection key={item.title} delay={0.05}>
@@ -319,7 +316,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-3xl font-semibold text-white tracking-[-0.02em] mb-4">See the thinking behind the products</h2>
-            <p className="text-slate-400 mb-8 max-w-xl mx-auto">Nine case studies with the full problem framing, product strategy, stakeholder dynamics, technical architecture, execution approach, and what I got wrong.</p>
+            <p className="text-slate-400 mb-8 max-w-xl mx-auto">Nine case studies covering the problem, strategy, technical architecture, and what I got wrong.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/case-studies" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold hover:bg-[#00b891] transition-all">
                 Read Case Studies <ArrowRight size={16} />
