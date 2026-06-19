@@ -132,7 +132,7 @@ export default function Resume() {
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold text-sm hover:bg-[#00b891] transition-all">
                   <Mail size={15} /> Email me directly
                 </a>
-                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a/" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all">
                   <ExternalLink size={15} /> LinkedIn
                 </a>

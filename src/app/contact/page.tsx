@@ -56,7 +56,7 @@ export default function Contact() {
               </AnimatedSection>
 
               <AnimatedSection delay={0.05}>
-                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a-5b81b811a" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a/" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 rounded-2xl border border-white/[0.08] card-hover group"
                   style={{ background: "rgba(10,15,30,0.6)" }}>
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(0,212,170,0.1)" }}>
