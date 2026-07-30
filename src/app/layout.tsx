@@ -205,7 +205,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -219,7 +219,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} bg-[#020817] text-slate-100 antialiased`}
+        className={`${inter.variable} bg-[#f8fafc] text-slate-900 antialiased`}
       >
         <a href="#main-content" className="skip-link">
           Skip to main content

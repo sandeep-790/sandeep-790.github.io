@@ -91,8 +91,8 @@ const skills = [
 ];
 
 const tierColors: Record<string, string> = {
-  Expert: "text-[#00d4aa] border-[#00d4aa]/30 bg-[#00d4aa]/5",
-  Practitioner: "text-[#818cf8] border-[#818cf8]/30 bg-[#818cf8]/5",
+  Expert: "text-[#0f766e] border-[#0f766e]/30 bg-[#0f766e]/6",
+  Practitioner: "text-[#818cf8] border-[#818cf8]/30 bg-[#818cf8]/6",
 };
 
 const tools = ["Jira", "Figma", "Postman", "Mixpanel", "Amplitude", "Metabase", "Looker", "Confluence", "Notion"];
@@ -136,25 +136,25 @@ const experience = [
 
 export default function About() {
   return (
-    <div className="bg-[#020817] pt-24">
-      <section className="py-20 border-b border-white/5">
+    <div className="bg-[#f8fafc] pt-24">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             <div className="lg:col-span-3">
               <AnimatedSection>
-                <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-4">About Me</p>
-                <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+                <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-4">About Me</p>
+                <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                   Eight years building the operating system for restaurants at scale.
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="text-slate-300 text-lg leading-[1.8] mb-5">
+                <p className="text-slate-700 text-lg leading-[1.8] mb-5">
                   I&apos;m Sandeep — Senior PM at Petpooja, India&apos;s largest restaurant tech platform. Over 8 years I&apos;ve ended up owning the full stack: the POS that processes orders during the lunch rush, the catalog system keeping 15,000 outlets in sync across every aggregator, the integration platform wiring third-party systems together, and the backend architecture underpinning all of it.
                 </p>
-                <p className="text-slate-300 text-lg leading-[1.8] mb-5">
+                <p className="text-slate-700 text-lg leading-[1.8] mb-5">
                   Most restaurant tech is built as disconnected tools. A menu update in the POS doesn&apos;t reach the aggregator. A price change at brand HQ takes three days to reach outlet 47. The problems aren&apos;t product problems — they&apos;re integration problems disguised as product problems. I build the connections, not just the surfaces.
                 </p>
-                <p className="text-slate-300 text-lg leading-[1.8] mb-5">
+                <p className="text-slate-700 text-lg leading-[1.8] mb-5">
                   I&apos;ve built software for single-outlet independents and franchise operators managing 200 locations from one dashboard. Both need reliability above everything else. An owner during a Friday night rush doesn&apos;t want features — they want the system to stay on and not lose an order. That constraint shapes every design decision I make.
                 </p>
                 <p className="text-slate-300 text-lg leading-[1.8]">
@@ -165,8 +165,8 @@ export default function About() {
 
             <div className="lg:col-span-2">
               <AnimatedSection delay={0.2} direction="right">
-                <div className="p-6 rounded-2xl border border-white/[0.08] sticky top-24" style={{ background: "rgba(10,15,30,0.8)" }}>
-                  <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">At a glance</h3>
+                <div className="p-6 rounded-2xl border border-slate-200 sticky top-24 bg-white">
+                  <h3 className="text-slate-900 font-semibold mb-5 text-sm uppercase tracking-wider">At a glance</h3>
                   <dl className="space-y-4">
                     {[
                       { label: "Role", value: "Senior Product Manager" },
@@ -180,14 +180,14 @@ export default function About() {
                     ].map(({ label, value }) => (
                       <div key={label} className="flex flex-col gap-0.5">
                         <dt className="text-xs text-slate-500 uppercase tracking-wide">{label}</dt>
-                        <dd className="text-slate-300 text-sm">{value}</dd>
+                        <dd className="text-slate-700 text-sm">{value}</dd>
                       </div>
                     ))}
                   </dl>
-                  <div className="mt-6 pt-6 border-t border-white/5">
+                  <div className="mt-6 pt-6 border-t border-slate-200">
                     <Link
                       href="/contact"
-                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold text-sm hover:bg-[#00b891] transition-all duration-200"
+                      className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#0f172a] font-semibold text-sm hover:bg-[#00b891] transition-all duration-200"
                     >
                       Get in touch <ArrowRight size={14} />
                     </Link>
@@ -200,11 +200,11 @@ export default function About() {
       </section>
 
       {/* Leadership Philosophy */}
-      <section className="py-20 border-b border-white/5">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-3">Leadership</p>
-            <h2 className="text-3xl font-semibold text-white tracking-[-0.02em] mb-12">How I lead product teams</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-3">Leadership</p>
+            <h2 className="text-3xl font-semibold text-slate-900 tracking-[-0.02em] mb-12">How I lead product teams</h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -222,9 +222,9 @@ export default function About() {
               },
             ].map((item) => (
               <AnimatedSection key={item.title} delay={0.05}>
-                <div className="p-6 rounded-2xl border border-white/[0.08] card-hover h-full" style={{ background: "rgba(10,15,30,0.6)" }}>
-                  <h3 className="text-white font-semibold mb-3">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-[1.75]">{item.body}</p>
+                <div className="p-6 rounded-2xl border border-slate-200 card-hover h-full bg-white">
+                  <h3 className="text-slate-900 font-semibold mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-[1.75]">{item.body}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -233,27 +233,27 @@ export default function About() {
       </section>
 
       {/* Experience */}
-      <section className="py-20 border-b border-white/5">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-3">Experience</p>
-            <h2 className="text-3xl font-semibold text-white tracking-[-0.02em] mb-12">What I built and what it moved</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-3">Experience</p>
+            <h2 className="text-3xl font-semibold text-slate-900 tracking-[-0.02em] mb-12">What I built and what it moved</h2>
           </AnimatedSection>
-          <div className="relative pl-8 border-l border-white/[0.07] space-y-12">
+          <div className="relative pl-8 border-l border-slate-200 space-y-12">
             {experience.map((exp, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="relative">
-                  <div className="absolute -left-10 top-1 w-4 h-4 rounded-full border-2 border-[#00d4aa] bg-[#020817]" />
+                  <div className="absolute -left-10 top-1 w-4 h-4 rounded-full border-2 border-[#0f766e] bg-[#f8fafc]" />
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                    <h3 className="text-white font-semibold text-lg">{exp.role}</h3>
+                    <h3 className="text-slate-900 font-semibold text-lg">{exp.role}</h3>
                     <span className="text-slate-500 text-sm flex-shrink-0 font-mono">{exp.period}</span>
                   </div>
-                  <p className="text-[#00d4aa] text-sm mb-0.5">{exp.company}</p>
+                  <p className="text-[#0f766e] text-sm mb-0.5">{exp.company}</p>
                   <p className="text-slate-500 text-xs mb-4">{exp.companyDesc}</p>
                   <ul className="space-y-2.5">
                     {exp.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-3 text-slate-400 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00d4aa]/50 mt-2 flex-shrink-0" />
+                      <li key={j} className="flex items-start gap-3 text-slate-600 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0f766e]/50 mt-2 flex-shrink-0" />
                         {b}
                       </li>
                     ))}
@@ -266,21 +266,21 @@ export default function About() {
       </section>
 
       {/* Skills */}
-      <section className="py-20 border-b border-white/5">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-3">Skills</p>
-            <h2 className="text-3xl font-semibold text-white tracking-[-0.02em] mb-2">Where I&apos;m strong</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-3">Skills</p>
+            <h2 className="text-3xl font-semibold text-slate-900 tracking-[-0.02em] mb-2">Where I&apos;m strong</h2>
             <p className="text-slate-500 text-sm mb-12">Expert = own the decision, defend the trade-off, ship it. Practitioner = drive it with the right technical partner.</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((cluster, i) => (
               <AnimatedSection key={cluster.title} delay={i * 0.08}>
-                <div className="p-6 rounded-2xl border border-white/[0.08] card-hover" style={{ background: "rgba(10,15,30,0.6)" }}>
+                <div className="p-6 rounded-2xl border border-slate-200 card-hover bg-white">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">{cluster.icon}</span>
-                      <h3 className="text-white font-semibold text-sm">{cluster.title}</h3>
+                      <h3 className="text-slate-900 font-semibold text-sm">{cluster.title}</h3>
                     </div>
                     <span className={`px-2 py-0.5 rounded-full text-xs border font-medium flex-shrink-0 ${tierColors[cluster.tier]}`}>
                       {cluster.tier}
@@ -288,7 +288,7 @@ export default function About() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {cluster.pills.map((pill) => (
-                      <span key={pill} className="px-2.5 py-1 rounded-full text-xs border border-white/[0.08] text-slate-400" style={{ background: "rgba(0,212,170,0.04)" }}>
+                      <span key={pill} className="px-2.5 py-1 rounded-full text-xs border border-slate-200 text-slate-600" style={{ background: "rgba(15,118,110,0.05)" }}>
                         {pill}
                       </span>
                     ))}
@@ -298,11 +298,11 @@ export default function About() {
             ))}
           </div>
           <AnimatedSection delay={0.4}>
-            <div className="mt-6 p-5 rounded-2xl border border-white/[0.06]" style={{ background: "rgba(10,15,30,0.4)" }}>
+            <div className="mt-6 p-5 rounded-2xl border border-slate-200 bg-slate-50">
               <p className="text-slate-500 text-xs uppercase tracking-wider mb-3">Tools</p>
               <div className="flex flex-wrap gap-2">
                 {tools.map((tool) => (
-                  <span key={tool} className="px-3 py-1 rounded-full text-xs border border-white/[0.08] text-slate-500" style={{ background: "rgba(255,255,255,0.02)" }}>
+                  <span key={tool} className="px-3 py-1 rounded-full text-xs border border-slate-200 text-slate-500 bg-white">
                     {tool}
                   </span>
                 ))}
@@ -315,13 +315,13 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-3xl font-semibold text-white tracking-[-0.02em] mb-4">See the thinking behind the products</h2>
-            <p className="text-slate-400 mb-8 max-w-xl mx-auto">Nine case studies covering the problem, strategy, technical architecture, and what I got wrong.</p>
+            <h2 className="text-3xl font-semibold text-slate-900 tracking-[-0.02em] mb-4">See the thinking behind the products</h2>
+            <p className="text-slate-600 mb-8 max-w-xl mx-auto">Nine case studies covering the problem, strategy, technical architecture, and what I got wrong.</p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/case-studies" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold hover:bg-[#00b891] transition-all">
+              <Link href="/case-studies" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#0f172a] font-semibold hover:bg-[#00b891] transition-all">
                 Read Case Studies <ArrowRight size={16} />
               </Link>
-              <Link href="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-slate-300 font-medium hover:border-white/20 hover:text-white transition-all">
+              <Link href="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-600 font-medium hover:border-slate-400 hover:text-slate-900 transition-all">
                 View All Projects
               </Link>
             </div>

@@ -255,13 +255,13 @@ const sections = [
 
 export default function Projects() {
   return (
-    <div className="bg-[#020817] pt-24">
-      <section className="py-20 border-b border-white/5">
+    <div className="bg-[#f8fafc] pt-24">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-xs font-medium text-[#00d4aa] uppercase tracking-widest mb-4">Work</p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Products I&apos;ve built</h1>
-            <p className="text-slate-400 text-lg max-w-2xl">
+            <p className="text-xs font-medium text-[#0f766e] uppercase tracking-widest mb-4">Work</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Products I&apos;ve built</h1>
+            <p className="text-slate-600 text-lg max-w-2xl">
               Eleven products across the restaurant technology and commerce stack — owned from problem discovery through architecture, execution, and post-launch growth. Each one connects to the others.
             </p>
           </AnimatedSection>
@@ -274,10 +274,10 @@ export default function Projects() {
             <div key={section.label}>
               <AnimatedSection>
                 <div className="flex items-center gap-4 mb-6">
-                  <h2 className="text-lg font-semibold text-white">{section.label}</h2>
-                  <div className="flex-1 h-px bg-white/8" />
+                  <h2 className="text-lg font-semibold text-slate-900">{section.label}</h2>
+                  <div className="flex-1 h-px bg-slate-200" />
                   {section.note && (
-                    <p className="text-slate-600 text-xs max-w-xs text-right hidden sm:block">{section.note}</p>
+                    <p className="text-slate-400 text-xs max-w-xs text-right hidden sm:block">{section.note}</p>
                   )}
                 </div>
               </AnimatedSection>
@@ -285,23 +285,23 @@ export default function Projects() {
               <div className="space-y-5">
                 {section.projects.map((project, i) => (
                   <AnimatedSection key={project.id} delay={i * 0.06}>
-                    <div className="p-6 sm:p-8 rounded-2xl border border-white/8 card-hover" style={{ background: "rgba(10,15,30,0.6)" }}>
+                    <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 card-hover bg-white">
                       <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                         <div className="flex items-start gap-4 sm:w-2/3">
-                          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(0,212,170,0.08)" }}>
+                          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(15,118,110,0.08)" }}>
                             {project.icon}
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-1">
-                              <span className="text-xs text-slate-600 font-mono">{project.num}</span>
-                              <h3 className="text-white font-semibold text-lg">{project.title}</h3>
+                              <span className="text-xs text-slate-400 font-mono">{project.num}</span>
+                              <h3 className="text-slate-900 font-semibold text-lg">{project.title}</h3>
                             </div>
-                            <p className="text-[#00d4aa] text-sm mb-3">{project.tagline}</p>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-4">{project.description}</p>
+                            <p className="text-[#0f766e] text-sm mb-3">{project.tagline}</p>
+                            <p className="text-slate-600 text-sm leading-relaxed mb-4">{project.description}</p>
                             <ul className="space-y-1.5">
                               {project.bullets.map((b, j) => (
                                 <li key={j} className="flex items-start gap-2 text-sm text-slate-500">
-                                  <CheckCircle2 size={13} className="text-[#00d4aa]/60 mt-0.5 flex-shrink-0" />
+                                  <CheckCircle2 size={13} className="text-[#0f766e]/60 mt-0.5 flex-shrink-0" />
                                   {b}
                                 </li>
                               ))}
@@ -312,12 +312,12 @@ export default function Projects() {
                         <div className="sm:w-1/3 flex flex-col gap-4">
                           <div className="flex flex-wrap gap-1.5">
                             {project.tags.map((tag) => (
-                              <span key={tag} className="px-2 py-0.5 rounded-full text-xs border border-white/8 text-slate-500" style={{ background: "rgba(255,255,255,0.02)" }}>
+                              <span key={tag} className="px-2 py-0.5 rounded-full text-xs border border-slate-200 text-slate-500" style={{ background: "rgba(0,0,0,0.02)" }}>
                                 {tag}
                               </span>
                             ))}
                           </div>
-                          <Link href="/case-studies" className="inline-flex items-center gap-1 text-[#00d4aa] text-sm font-medium hover:gap-2 transition-all">
+                          <Link href="/case-studies" className="inline-flex items-center gap-1 text-[#0f766e] text-sm font-medium hover:gap-2 transition-all">
                             Read case study <ArrowRight size={13} />
                           </Link>
                         </div>
