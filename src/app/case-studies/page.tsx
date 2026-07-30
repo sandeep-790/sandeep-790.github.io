@@ -790,7 +790,7 @@ const caseStudies: CaseStudy[] = [
 function MetricBadge({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <div className="text-lg font-bold text-[#00d4aa]">{value}</div>
+      <div className="text-lg font-bold text-[#0f766e]">{value}</div>
       <div className="text-slate-500 text-xs mt-0.5">{label}</div>
     </div>
   );
@@ -800,7 +800,7 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="rounded-2xl border border-white/8 overflow-hidden" style={{ background: "rgba(10,15,30,0.6)" }}>
+    <div className="rounded-2xl border border-slate-200 overflow-hidden bg-white">
       {/* Header — always visible */}
       <button
         onClick={() => setOpen(!open)}
@@ -814,30 +814,30 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(10,15,30,0.8) 100%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(248,250,252,0.6) 100%)" }} />
           </div>
         )}
         <div className="p-7 sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-start gap-5 flex-1 min-w-0">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(0,212,170,0.08)" }}>
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(15,118,110,0.08)" }}>
               {cs.icon}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-1.5">
-                <span className="text-xs text-slate-600 font-mono">{cs.num}</span>
-                <h3 className="text-white font-bold text-xl">{cs.title}</h3>
+                <span className="text-xs text-slate-400 font-mono">{cs.num}</span>
+                <h3 className="text-slate-900 font-bold text-xl">{cs.title}</h3>
               </div>
               <p className="text-slate-500 text-xs mb-3 tracking-wide">{cs.category}</p>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-2xl">{cs.summary}</p>
+              <p className="text-slate-600 text-sm leading-relaxed max-w-2xl">{cs.summary}</p>
             </div>
           </div>
-          <div className="text-slate-500 flex-shrink-0 mt-1">
+          <div className="text-slate-400 flex-shrink-0 mt-1">
             {open ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-5 border-t border-white/5">
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-5 border-t border-slate-200">
           {cs.metrics.map((m) => (
             <MetricBadge key={m.label} value={m.value} label={m.label} />
           ))}
@@ -845,7 +845,7 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
 
         <div className="mt-4 flex flex-wrap gap-2">
           {cs.tags.map((tag) => (
-            <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-white/8 text-slate-600" style={{ background: "rgba(255,255,255,0.02)" }}>
+            <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-slate-200 text-slate-500" style={{ background: "rgba(0,0,0,0.02)" }}>
               {tag}
             </span>
           ))}
@@ -855,22 +855,22 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
 
       {/* Expanded content */}
       {open && (
-        <div className="border-t border-white/5">
+        <div className="border-t border-slate-200">
           <div className="px-7 sm:px-8 py-8 space-y-0">
             {cs.sections.map((section, idx) => (
-              <div key={idx} className={`py-7 ${idx < cs.sections.length - 1 ? "border-b border-white/5" : ""}`}>
+              <div key={idx} className={`py-7 ${idx < cs.sections.length - 1 ? "border-b border-slate-200" : ""}`}>
                 <div className="flex items-start gap-6">
                   <div className="w-5 flex-shrink-0 mt-0.5">
-                    <span className="text-xs text-slate-700 font-mono">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-xs text-slate-400 font-mono">{String(idx + 1).padStart(2, "0")}</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-xs font-semibold text-[#00d4aa] uppercase tracking-widest mb-3">{section.title}</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{section.content}</p>
+                    <h4 className="text-xs font-semibold text-[#0f766e] uppercase tracking-widest mb-3">{section.title}</h4>
+                    <p className="text-slate-600 text-sm leading-relaxed">{section.content}</p>
                     {section.bullets && (
                       <ul className="mt-4 space-y-2">
                         {section.bullets.map((b, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-sm text-slate-500">
-                            <span className="w-1 h-1 rounded-full bg-[#00d4aa]/50 mt-2 flex-shrink-0" />
+                          <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
+                            <span className="w-1 h-1 rounded-full bg-[#0f766e]/50 mt-2 flex-shrink-0" />
                             {b}
                           </li>
                         ))}
@@ -889,15 +889,15 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
 
 export default function CaseStudies() {
   return (
-    <div className="bg-[#020817] pt-24">
-      <section className="py-20 border-b border-white/5">
+    <div className="bg-[#f8fafc] pt-24">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-xs font-medium text-[#00d4aa] uppercase tracking-widest mb-4">Case Studies</p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">
+            <p className="text-xs font-medium text-[#0f766e] uppercase tracking-widest mb-4">Case Studies</p>
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-5">
               Nine products. Every layer of the stack.
             </h1>
-            <p className="text-slate-400 text-lg max-w-2xl leading-relaxed">
+            <p className="text-slate-600 text-lg max-w-2xl leading-relaxed">
               Each case study covers the business problem, market context, product strategy, technical architecture, stakeholder management, execution approach, and what I got wrong. This is the thinking behind the outcomes.
             </p>
           </AnimatedSection>
@@ -910,12 +910,12 @@ export default function CaseStudies() {
                 "Stakeholder Management", "Technical Architecture", "Key Product Decisions",
                 "Execution Approach", "Metrics", "Outcomes",
               ].map((label) => (
-                <div key={label} className="px-2.5 py-1.5 rounded-lg border border-white/5 text-center" style={{ background: "rgba(0,212,170,0.03)" }}>
-                  <span className="text-slate-600 text-xs">{label}</span>
+                <div key={label} className="px-2.5 py-1.5 rounded-lg border border-slate-200 text-center" style={{ background: "rgba(15,118,110,0.04)" }}>
+                  <span className="text-slate-500 text-xs">{label}</span>
                 </div>
               ))}
             </div>
-            <p className="text-slate-700 text-xs mt-3">13 sections per case study — click any case study to expand</p>
+            <p className="text-slate-400 text-xs mt-3">13 sections per case study — click any case study to expand</p>
           </AnimatedSection>
         </div>
       </section>
@@ -930,12 +930,12 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      <section className="py-12 border-t border-white/5">
+      <section className="py-12 border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedSection>
-            <div className="p-5 rounded-2xl border border-amber-500/10" style={{ background: "rgba(245,158,11,0.04)" }}>
-              <p className="text-amber-500/70 text-xs">
-                <strong className="text-amber-500/90">Note:</strong> Metrics reflect outcomes from Petpooja&apos;s restaurant technology products. Specific figures will be verified through reference conversations on request. No NDA-protected customer data is disclosed.
+            <div className="p-5 rounded-2xl border border-amber-500/20 bg-amber-50">
+              <p className="text-amber-700/80 text-xs">
+                <strong className="text-amber-700">Note:</strong> Metrics reflect outcomes from Petpooja&apos;s restaurant technology products. Specific figures will be verified through reference conversations on request. No NDA-protected customer data is disclosed.
               </p>
             </div>
           </AnimatedSection>

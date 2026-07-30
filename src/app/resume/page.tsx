@@ -115,25 +115,25 @@ const tools = ["Jira", "Figma", "Postman", "Mixpanel", "Amplitude", "Metabase", 
 
 export default function Resume() {
   return (
-    <div className="bg-[#020817] pt-24">
-      <section className="py-20 border-b border-white/5">
+    <div className="bg-[#f8fafc] pt-24">
+      <section className="py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedSection>
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
               <div>
-                <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-4">Resume</p>
-                <h1 className="text-4xl sm:text-5xl font-bold text-white mb-2">Sandeep Kurapati</h1>
-                <p className="text-slate-400 text-lg">Senior Product Manager · Restaurant Technology & Commerce Platforms</p>
+                <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-4">Resume</p>
+                <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-2">Sandeep Kurapati</h1>
+                <p className="text-slate-600 text-lg">Senior Product Manager · Restaurant Technology & Commerce Platforms</p>
                 <p className="text-slate-500 text-sm mt-1">Petpooja · India · 8+ years at Petpooja</p>
-                <p className="text-[#00d4aa]/80 text-sm mt-2 font-medium">Open to: Group PM · Head of Product · Senior PM · Remote and relocation considered</p>
+                <p className="text-[#0f766e] text-sm mt-2 font-medium">Open to: Group PM · Head of Product · Senior PM · Remote and relocation considered</p>
               </div>
               <div className="flex flex-col gap-3 flex-shrink-0">
                 <a href="mailto:sandy.show18@gmail.com"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#020817] font-semibold text-sm hover:bg-[#00b891] transition-all">
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00d4aa] text-[#0f172a] font-semibold text-sm hover:bg-[#00b891] transition-all">
                   <Mail size={15} /> Email me directly
                 </a>
                 <a href="https://www.linkedin.com/in/sandeep-kurapati-5b81b811a/" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all">
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-900 transition-all">
                   <ExternalLink size={15} /> LinkedIn
                 </a>
               </div>
@@ -146,15 +146,15 @@ export default function Resume() {
         {/* Summary */}
         <AnimatedSection>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Professional Summary</h2>
-            <div className="max-w-3xl p-6 rounded-2xl border border-white/[0.08]" style={{ background: "rgba(10,15,30,0.6)" }}>
-              <p className="text-slate-300 leading-relaxed">
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Professional Summary</h2>
+            <div className="max-w-3xl p-6 rounded-2xl border border-slate-200 bg-white">
+              <p className="text-slate-700 leading-relaxed">
                 Eight years at Petpooja — progressing from BDE to Operations Manager to Senior Product Manager — building the restaurant technology stack that now serves 1,00,000+ outlets across India. I&apos;ve owned product at every layer: the POS and kitchen operations systems restaurants run on daily, the catalog infrastructure that keeps menus in sync across every channel, the online ordering and dine-in products guests interact with, the multi-brand operations platform franchise groups depend on, the integration platform wiring Petpooja to aggregators and hardware, and the backend service architecture underpinning it all.
               </p>
-              <p className="text-slate-300 leading-relaxed mt-4">
+              <p className="text-slate-700 leading-relaxed mt-4">
                 My edge is the ability to hold the full system in mind while making decisions at the product level. A catalog data model isn&apos;t just a schema — it determines how fast a chain can push a price change, whether an aggregator sees the right availability, and how a brand manager controls outlets across the country. I design for those downstream consequences, not just the immediate feature. I can write a system design document in the morning and a merchant-facing product spec in the afternoon.
               </p>
-              <p className="text-slate-300 leading-relaxed mt-4">
+              <p className="text-slate-700 leading-relaxed mt-4">
                 I also know what to say no to. I&apos;ve deprioritised technically complete features weeks before launch because pilot data falsified the assumption. I&apos;ve pushed back on business-driven scope expansion when reliability data showed the platform wasn&apos;t ready. The discipline that separates a senior PM from an experienced one is knowing which constraint is load-bearing — and being willing to defend that to stakeholders with data, not deference.
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function Resume() {
         {/* Impact */}
         <AnimatedSection delay={0.05}>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Selected Impact</h2>
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Selected Impact</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { value: "1,00,000+", label: "Restaurant outlets on platform", sub: "Petpooja, India" },
@@ -172,10 +172,10 @@ export default function Resume() {
                 { value: "3 days → 4 hrs", label: "Menu propagation time", sub: "200-outlet chains, automated sync" },
                 { value: "98.1% → 99.7%", label: "Platform uptime", sub: "−82% cascading failures, 6-domain decomposition" },
               ].map((item) => (
-                <div key={item.label} className="p-5 rounded-2xl border border-white/[0.08] text-center" style={{ background: "rgba(10,15,30,0.6)" }}>
-                  <div className="text-xl font-bold text-[#00d4aa] metric-value mb-1">{item.value}</div>
-                  <div className="text-slate-400 text-xs mb-1">{item.label}</div>
-                  <div className="text-slate-500 text-[11px]">{item.sub}</div>
+                <div key={item.label} className="p-5 rounded-2xl border border-slate-200 text-center bg-white">
+                  <div className="text-xl font-bold text-[#0f766e] metric-value mb-1">{item.value}</div>
+                  <div className="text-slate-600 text-xs mb-1">{item.label}</div>
+                  <div className="text-slate-400 text-[11px]">{item.sub}</div>
                 </div>
               ))}
             </div>
@@ -185,10 +185,10 @@ export default function Resume() {
         {/* Competencies */}
         <AnimatedSection delay={0.1}>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Core Competencies</h2>
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Core Competencies</h2>
             <div className="flex flex-wrap gap-2">
               {competencies.map((c) => (
-                <span key={c} className="px-3 py-1.5 rounded-xl text-sm border border-white/[0.08] text-slate-300" style={{ background: "rgba(0,212,170,0.05)" }}>
+                <span key={c} className="px-3 py-1.5 rounded-xl text-sm border border-slate-200 text-slate-700" style={{ background: "rgba(15,118,110,0.06)" }}>
                   {c}
                 </span>
               ))}
@@ -199,22 +199,22 @@ export default function Resume() {
         {/* Experience */}
         <AnimatedSection delay={0.15}>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-8">Experience</h2>
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-8">Experience</h2>
             <div className="space-y-10">
               {experience.map((exp, i) => (
-                <div key={i} className="relative pl-8 border-l border-white/[0.07]">
-                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-[#00d4aa] bg-[#020817]" />
+                <div key={i} className="relative pl-8 border-l border-slate-200">
+                  <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-[#0f766e] bg-[#f8fafc]" />
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                    <h3 className="text-white font-semibold text-lg">{exp.role}</h3>
+                    <h3 className="text-slate-900 font-semibold text-lg">{exp.role}</h3>
                     <span className="text-slate-500 text-sm flex-shrink-0 font-mono">{exp.period}</span>
                   </div>
-                  <p className="text-[#00d4aa] text-sm">{exp.company}</p>
+                  <p className="text-[#0f766e] text-sm">{exp.company}</p>
                   <p className="text-slate-500 text-xs mb-3">{exp.companyDesc}</p>
-                  <p className="text-slate-400 text-sm mb-3 leading-relaxed">{exp.summary}</p>
+                  <p className="text-slate-600 text-sm mb-3 leading-relaxed">{exp.summary}</p>
                   <ul className="space-y-2">
                     {exp.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-2 text-slate-500 text-sm">
-                        <span className="w-1 h-1 rounded-full bg-[#00d4aa]/50 mt-2 flex-shrink-0" />
+                      <li key={j} className="flex items-start gap-2 text-slate-600 text-sm">
+                        <span className="w-1 h-1 rounded-full bg-[#0f766e]/50 mt-2 flex-shrink-0" />
                         {b}
                       </li>
                     ))}
@@ -228,25 +228,25 @@ export default function Resume() {
         {/* Skills */}
         <AnimatedSection delay={0.2}>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-2">Skills</h2>
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-2">Skills</h2>
             <p className="text-slate-500 text-[11px] mb-8">Expert = own the decision, defend the trade-off, ship it. Practitioner = drive it with the right technical partner.</p>
             <div className="grid md:grid-cols-2 gap-6">
               {skillGroups.map((group) => (
                 <div key={group.label}>
-                  <h3 className="text-slate-400 text-xs font-medium mb-3">{group.label}</h3>
+                  <h3 className="text-slate-500 text-xs font-medium mb-3">{group.label}</h3>
                   <div className="flex flex-wrap gap-1.5">
                     {group.items.map((item) => (
-                      <span key={item} className="px-2.5 py-0.5 rounded-full text-xs border border-white/[0.08] text-slate-500">{item}</span>
+                      <span key={item} className="px-2.5 py-0.5 rounded-full text-xs border border-slate-200 text-slate-600 bg-white">{item}</span>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-6">
-              <h3 className="text-slate-400 text-xs font-medium mb-3">Tools</h3>
+              <h3 className="text-slate-500 text-xs font-medium mb-3">Tools</h3>
               <div className="flex flex-wrap gap-1.5">
                 {tools.map((t) => (
-                  <span key={t} className="px-2.5 py-0.5 rounded-full text-xs border border-white/[0.08] text-slate-500">{t}</span>
+                  <span key={t} className="px-2.5 py-0.5 rounded-full text-xs border border-slate-200 text-slate-600 bg-white">{t}</span>
                 ))}
               </div>
             </div>
@@ -256,22 +256,22 @@ export default function Resume() {
         {/* References */}
         <AnimatedSection delay={0.25}>
           <section>
-            <h2 className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">References</h2>
-            <div className="p-5 rounded-2xl border border-white/[0.08]" style={{ background: "rgba(10,15,30,0.4)" }}>
-              <p className="text-slate-400 text-sm mb-4">I can provide references across three layers of collaboration:</p>
+            <h2 className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">References</h2>
+            <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50">
+              <p className="text-slate-600 text-sm mb-4">I can provide references across three layers of collaboration:</p>
               <ul className="space-y-2 mb-4">
                 {[
                   "Engineering Directors and Staff Engineers who worked directly with me on POS, catalog, platform architecture, and Android — for technical depth and cross-functional effectiveness",
                   "Product leadership and business stakeholders who observed roadmap strategy, prioritisation calls, and CPO-level presentations — for strategic judgment",
                   "Sales and operations leaders who partnered with me on go-to-market for POS, multi-brand, and integration platform — for commercial awareness and stakeholder management",
                 ].map((ref) => (
-                  <li key={ref} className="flex items-start gap-2 text-slate-400 text-sm">
-                    <span className="w-1 h-1 rounded-full bg-[#00d4aa]/50 mt-2 flex-shrink-0" />
+                  <li key={ref} className="flex items-start gap-2 text-slate-600 text-sm">
+                    <span className="w-1 h-1 rounded-full bg-[#0f766e]/50 mt-2 flex-shrink-0" />
                     {ref}
                   </li>
                 ))}
               </ul>
-              <a href="mailto:sandy.show18@gmail.com" className="inline-flex items-center gap-1 text-[#00d4aa] text-sm hover:underline">
+              <a href="mailto:sandy.show18@gmail.com" className="inline-flex items-center gap-1 text-[#0f766e] text-sm hover:underline">
                 Request references — typically available within one business day →
               </a>
             </div>
@@ -279,8 +279,8 @@ export default function Resume() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
-          <div className="p-5 rounded-2xl border border-white/[0.06]" style={{ background: "rgba(10,15,30,0.3)" }}>
-            <p className="text-slate-500 text-[11px]">
+          <div className="p-5 rounded-2xl border border-slate-200 bg-slate-50">
+            <p className="text-slate-400 text-[11px]">
               All metrics reflect outcomes from Petpooja&apos;s restaurant technology products. No NDA-protected customer data is disclosed. References can verify specific figures on request.
             </p>
           </div>

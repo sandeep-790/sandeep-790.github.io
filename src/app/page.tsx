@@ -186,29 +186,29 @@ const careerMilestones = [
 ];
 
 // ─── Shared style tokens ──────────────────────────────────────────────────────
-const cardBg  = "rgba(255,255,255,0.025)";
-const cardBg2 = "rgba(255,255,255,0.018)";
+const cardBg  = "#ffffff";
+const cardBg2 = "rgba(248,250,252,0.95)";
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Home() {
   return (
-    <div className="bg-[#020817]">
+    <div className="bg-[#f8fafc]">
 
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background grid — slightly more visible */}
+        {/* Background grid */}
         <div className="absolute inset-0"
           style={{
-            backgroundImage: "linear-gradient(rgba(0,212,170,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,170,0.03) 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(rgba(0,137,122,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,137,122,0.04) 1px, transparent 1px)",
             backgroundSize: "64px 64px",
           }}
         />
         {/* Ambient glow */}
         <div className="absolute top-1/4 right-1/3 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(0,212,170,0.06) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%)" }} />
         <div className="absolute bottom-1/3 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(circle, rgba(129,140,248,0.07) 0%, transparent 70%)" }} />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
@@ -221,8 +221,8 @@ export default function Home() {
                 transition={{ duration: 0.45 }}
                 className="flex items-center gap-2.5 mb-7"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00d4aa] animate-pulse flex-shrink-0" />
-                <span className="text-[#00d4aa] text-[11px] font-semibold uppercase tracking-[0.14em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0f766e] animate-pulse flex-shrink-0" />
+                <span className="text-[#0f766e] text-[11px] font-semibold uppercase tracking-[0.14em]">
                   Group PM · Head of Product · Senior PM
                 </span>
               </motion.div>
@@ -231,7 +231,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.07 }}
-                className="text-5xl sm:text-6xl lg:text-[64px] xl:text-7xl font-bold text-white leading-[1.0] tracking-[-0.03em] mb-6"
+                className="text-5xl sm:text-6xl lg:text-[64px] xl:text-7xl font-bold text-slate-900 leading-[1.0] tracking-[-0.03em] mb-6"
               >
                 Product leadership<br />
                 <span className="gradient-text">at platform scale.</span>
@@ -241,7 +241,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.16 }}
-                className="text-slate-300 text-lg leading-[1.8] mb-8 max-w-xl"
+                className="text-slate-600 text-lg leading-[1.8] mb-8 max-w-xl"
               >
                 Eight years at Petpooja — India&apos;s largest restaurant tech platform — building the technology ecosystem serving 1,00,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
               </motion.p>
@@ -250,7 +250,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.22 }}
-                className="text-[#00d4aa]/70 text-sm mb-8"
+                className="text-[#0f766e]/80 text-sm mb-8"
               >
                 Now looking for my next role as a Group Product Manager or Head of Product.
               </motion.p>
@@ -266,7 +266,7 @@ export default function Home() {
                   Read case studies <ArrowRight size={15} />
                 </Link>
                 <Link href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-900 transition-all duration-200">
                   About me
                 </Link>
               </motion.div>
@@ -280,7 +280,7 @@ export default function Home() {
               className="hidden lg:block"
             >
               <div className="space-y-4">
-              <div className="relative rounded-2xl overflow-hidden border border-white/[0.09]" style={{ height: "220px" }}>
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200" style={{ height: "220px" }}>
                 <Image
                   src="/images/hero-platform-topology.png"
                   alt="Platform topology diagram showing Petpooja's restaurant technology ecosystem — POS, catalog, ordering, integrations, and finance layers"
@@ -289,25 +289,25 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="rounded-2xl border border-white/[0.09] overflow-hidden" style={{ background: cardBg }}>
+              <div className="rounded-2xl border border-slate-200 overflow-hidden" style={{ background: cardBg }}>
                 {/* Card header */}
-                <div className="flex items-center gap-2 px-5 py-4 border-b border-white/[0.06]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00d4aa]" />
+                <div className="flex items-center gap-2 px-5 py-4 border-b border-slate-200">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0f766e]" />
                   <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.13em]">Platform Impact</p>
                 </div>
                 {/* Metrics grid */}
-                <div className="grid grid-cols-2 gap-px bg-white/[0.05]">
+                <div className="grid grid-cols-2 gap-px bg-slate-200/60">
                   {heroMetrics.map((m) => (
                     <div key={m.label} className="px-5 py-5" style={{ background: cardBg2 }}>
-                      <div className="text-[22px] font-bold text-white metric-value mb-1">{m.value}</div>
-                      <div className="text-slate-400 text-xs leading-snug">{m.label}</div>
-                      <div className="text-slate-600 text-[11px] mt-0.5">{m.sub}</div>
+                      <div className="text-[22px] font-bold text-slate-900 metric-value mb-1">{m.value}</div>
+                      <div className="text-slate-600 text-xs leading-snug">{m.label}</div>
+                      <div className="text-slate-400 text-[11px] mt-0.5">{m.sub}</div>
                     </div>
                   ))}
                 </div>
                 {/* Card footer */}
-                <div className="px-5 py-3.5 border-t border-white/[0.06]">
-                  <p className="text-slate-600 text-[11px]">Restaurant Technology · Commerce Platforms · Platform Architecture</p>
+                <div className="px-5 py-3.5 border-t border-slate-200">
+                  <p className="text-slate-400 text-[11px]">Restaurant Technology · Commerce Platforms · Platform Architecture</p>
                 </div>
               </div>
               </div>
@@ -318,21 +318,21 @@ export default function Home() {
       </section>
 
       {/* ── 2. ABOUT ─────────────────────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <AnimatedSection>
-              <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">About</p>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6 leading-[1.2] tracking-[-0.02em]">
+              <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">About</p>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 mb-6 leading-[1.2] tracking-[-0.02em]">
                 I build the layer that makes complex systems feel simple to operators.
               </h2>
-              <p className="text-slate-300 leading-[1.8] mb-5">
+              <p className="text-slate-700 leading-[1.8] mb-5">
                 Most restaurant technology is built as a collection of disconnected tools. A menu update in the POS doesn&apos;t reach the aggregator. A price change at brand HQ takes days to reach outlet 47. I build the connections — the data models, the propagation engines, the platform contracts — that make those things automatic.
               </p>
-              <p className="text-slate-400 leading-[1.8] mb-5">
+              <p className="text-slate-600 leading-[1.8] mb-5">
                 My operating model: understand the operational workflow deeply before writing a spec, design for the integration boundary before the feature surface, and measure against metrics that reflect the actual business outcome — not proxy indicators.
               </p>
-              <p className="text-slate-400 leading-[1.8]">
+              <p className="text-slate-600 leading-[1.8]">
                 I&apos;ve been wrong in ways that mattered. I built a permission model that was technically elegant but operationally useless — outlet managers couldn&apos;t mark items out of stock without brand-level approval. Three operators rejected the beta before I fixed it. Being wrong faster is a skill I&apos;ve deliberately developed.
               </p>
             </AnimatedSection>
@@ -346,14 +346,14 @@ export default function Home() {
                   { label: "Location", value: "India · Open to remote and relocation" },
                   { label: "Target Role", value: "Group PM · Head of Product · Senior PM" },
                 ].map(({ label, value }) => (
-                  <div key={label} className="flex gap-4 p-4 rounded-xl border border-white/[0.07]" style={{ background: cardBg }}>
+                  <div key={label} className="flex gap-4 p-4 rounded-xl border border-slate-200" style={{ background: cardBg }}>
                     <span className="text-slate-500 text-xs w-24 flex-shrink-0 pt-0.5 leading-relaxed">{label}</span>
-                    <span className="text-slate-300 text-sm leading-relaxed">{value}</span>
+                    <span className="text-slate-700 text-sm leading-relaxed">{value}</span>
                   </div>
                 ))}
                 <div className="pt-3">
                   <Link href="/about"
-                    className="inline-flex items-center gap-1.5 text-[#00d4aa] text-sm font-medium hover:gap-2.5 transition-all duration-200">
+                    className="inline-flex items-center gap-1.5 text-[#0f766e] text-sm font-medium hover:gap-2.5 transition-all duration-200">
                     Full background <ArrowRight size={13} />
                   </Link>
                 </div>
@@ -364,13 +364,13 @@ export default function Home() {
       </section>
 
       {/* ── 3. PRODUCT DOMAINS ───────────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Product Domains</p>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Product Domains</p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] max-w-lg">Four domain clusters. Full ownership across each.</h2>
-              <Link href="/projects" className="text-slate-500 text-sm hover:text-[#00d4aa] transition-colors flex items-center gap-1.5 flex-shrink-0">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] max-w-lg">Four domain clusters. Full ownership across each.</h2>
+              <Link href="/projects" className="text-slate-500 text-sm hover:text-[#0f766e] transition-colors flex items-center gap-1.5 flex-shrink-0">
                 All products <ArrowRight size={13} />
               </Link>
             </div>
@@ -379,10 +379,10 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {productDomains.map((domain, i) => (
               <AnimatedSection key={domain.title} delay={i * 0.07}>
-                <div className="p-6 rounded-xl border border-white/[0.08] h-full card-hover" style={{ background: cardBg }}>
+                <div className="p-6 rounded-xl border border-slate-200 h-full card-hover" style={{ background: cardBg }}>
                   <div className="flex items-center gap-3 mb-5">
                     <span className="text-xl">{domain.icon}</span>
-                    <h3 className="text-white font-medium text-sm leading-tight">{domain.title}</h3>
+                    <h3 className="text-slate-900 font-medium text-sm leading-tight">{domain.title}</h3>
                   </div>
                   <ul className="space-y-2.5">
                     {domain.capabilities.map((cap) => (
@@ -400,13 +400,13 @@ export default function Home() {
       </section>
 
       {/* ── 4. FEATURED CASE STUDIES ─────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Featured Case Studies</p>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Featured Case Studies</p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] max-w-xl">The problem, the decision, the outcome.</h2>
-              <Link href="/case-studies" className="text-slate-500 text-sm hover:text-[#00d4aa] transition-colors flex items-center gap-1.5 flex-shrink-0">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] max-w-xl">The problem, the decision, the outcome.</h2>
+              <Link href="/case-studies" className="text-slate-500 text-sm hover:text-[#0f766e] transition-colors flex items-center gap-1.5 flex-shrink-0">
                 All 9 case studies <ArrowRight size={13} />
               </Link>
             </div>
@@ -415,34 +415,34 @@ export default function Home() {
           <div className="space-y-3">
             {featuredCaseStudies.map((cs, i) => (
               <AnimatedSection key={cs.id} delay={i * 0.08}>
-                <div className="rounded-xl border border-white/[0.08] card-hover overflow-hidden" style={{ background: cardBg }}>
-                  <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/[0.06]">
+                <div className="rounded-xl border border-slate-200 card-hover overflow-hidden" style={{ background: cardBg }}>
+                  <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
                     {/* Problem */}
                     <div className="p-7">
                       <div className="flex items-center gap-2.5 mb-4">
-                        <span className="text-[11px] text-slate-600 font-mono tracking-wider">{cs.num}</span>
-                        <h3 className="text-white font-semibold text-base leading-tight">{cs.title}</h3>
+                        <span className="text-[11px] text-slate-400 font-mono tracking-wider">{cs.num}</span>
+                        <h3 className="text-slate-900 font-semibold text-base leading-tight">{cs.title}</h3>
                       </div>
-                      <p className="text-[10px] text-[#00d4aa] font-semibold uppercase tracking-[0.12em] mb-3">The Problem</p>
-                      <p className="text-slate-400 text-sm leading-[1.75]">{cs.problem}</p>
+                      <p className="text-[10px] text-[#0f766e] font-semibold uppercase tracking-[0.12em] mb-3">The Problem</p>
+                      <p className="text-slate-600 text-sm leading-[1.75]">{cs.problem}</p>
                     </div>
                     {/* Insight */}
                     <div className="p-7">
                       <p className="text-[10px] text-[#818cf8] font-semibold uppercase tracking-[0.12em] mb-3">The Insight</p>
-                      <p className="text-slate-400 text-sm leading-[1.75]">{cs.insight}</p>
+                      <p className="text-slate-600 text-sm leading-[1.75]">{cs.insight}</p>
                     </div>
                     {/* Outcome */}
                     <div className="p-7">
-                      <p className="text-[10px] text-[#00d4aa] font-semibold uppercase tracking-[0.12em] mb-3">The Outcome</p>
-                      <p className="text-slate-200 text-sm leading-[1.75] font-medium mb-5">{cs.outcome}</p>
+                      <p className="text-[10px] text-[#0f766e] font-semibold uppercase tracking-[0.12em] mb-3">The Outcome</p>
+                      <p className="text-slate-800 text-sm leading-[1.75] font-medium mb-5">{cs.outcome}</p>
                       <div className="flex flex-wrap gap-1.5 mb-5">
                         {cs.tags.map((t) => (
-                          <span key={t} className="px-2.5 py-0.5 rounded-full text-[11px] border border-white/[0.08] text-slate-500" style={{ background: "rgba(255,255,255,0.02)" }}>
+                          <span key={t} className="px-2.5 py-0.5 rounded-full text-[11px] border border-slate-200 text-slate-500" style={{ background: "rgba(0,0,0,0.02)" }}>
                             {t}
                           </span>
                         ))}
                       </div>
-                      <Link href="/case-studies" className="inline-flex items-center gap-1 text-[#00d4aa] text-sm font-medium hover:gap-2 transition-all duration-200">
+                      <Link href="/case-studies" className="inline-flex items-center gap-1 text-[#0f766e] text-sm font-medium hover:gap-2 transition-all duration-200">
                         Full case study <ArrowUpRight size={13} />
                       </Link>
                     </div>
@@ -455,26 +455,26 @@ export default function Home() {
       </section>
 
       {/* ── 5. PRODUCT PHILOSOPHY ────────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Product Philosophy</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] mb-3">Four things I believe, with evidence.</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Product Philosophy</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] mb-3">Four things I believe, with evidence.</h2>
             <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-lg">Not principles from a framework. Things that came from building operational software at scale and watching what breaks.</p>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 gap-3">
             {philosophy.map((p, i) => (
               <AnimatedSection key={p.num} delay={i * 0.08}>
-                <div className="p-7 rounded-xl border border-white/[0.08] card-hover h-full" style={{ background: cardBg }}>
+                <div className="p-7 rounded-xl border border-slate-200 card-hover h-full" style={{ background: cardBg }}>
                   <div className="flex items-start gap-4 mb-5">
-                    <span className="text-5xl font-bold leading-none select-none" style={{ color: "rgba(255,255,255,0.055)" }}>{p.num}</span>
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-1" style={{ background: "rgba(0,212,170,0.1)", color: "#00d4aa" }}>
+                    <span className="text-5xl font-bold leading-none select-none" style={{ color: "rgba(0,0,0,0.07)" }}>{p.num}</span>
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-1" style={{ background: "rgba(15,118,110,0.1)", color: "#0f766e" }}>
                       {p.icon}
                     </div>
                   </div>
-                  <h3 className="text-white font-semibold mb-3 text-[15px] leading-snug">{p.title}</h3>
-                  <p className="text-slate-400 text-sm leading-[1.75]">{p.body}</p>
+                  <h3 className="text-slate-900 font-semibold mb-3 text-[15px] leading-snug">{p.title}</h3>
+                  <p className="text-slate-600 text-sm leading-[1.75]">{p.body}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -483,11 +483,11 @@ export default function Home() {
       </section>
 
       {/* ── 6. TECHNOLOGY & PLATFORM EXPERTISE ───────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Technology & Platform Expertise</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] mb-3">Technical depth, applied as a PM.</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Technology & Platform Expertise</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] mb-3">Technical depth, applied as a PM.</h2>
             <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-lg">
               I don&apos;t write production code. I do write system design specs, challenge architecture decisions, define API contracts, and hold engineering teams accountable to platform quality.
             </p>
@@ -496,12 +496,12 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {techExpertise.map((area, i) => (
               <AnimatedSection key={area.area} delay={i * 0.06}>
-                <div className="p-6 rounded-xl border border-white/[0.08] card-hover h-full" style={{ background: cardBg }}>
-                  <h3 className="text-white font-medium mb-2.5 text-sm">{area.area}</h3>
-                  <p className="text-slate-400 text-sm leading-[1.7] mb-4">{area.description}</p>
+                <div className="p-6 rounded-xl border border-slate-200 card-hover h-full" style={{ background: cardBg }}>
+                  <h3 className="text-slate-900 font-medium mb-2.5 text-sm">{area.area}</h3>
+                  <p className="text-slate-600 text-sm leading-[1.7] mb-4">{area.description}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {area.items.map((item) => (
-                      <span key={item} className="px-2.5 py-0.5 rounded-full text-[11px] border border-white/[0.07] text-slate-500" style={{ background: "rgba(0,212,170,0.03)" }}>
+                      <span key={item} className="px-2.5 py-0.5 rounded-full text-[11px] border border-slate-200 text-slate-500" style={{ background: "rgba(15,118,110,0.05)" }}>
                         {item}
                       </span>
                     ))}
@@ -514,11 +514,11 @@ export default function Home() {
       </section>
 
       {/* ── 7. CAREER JOURNEY ────────────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Career Journey</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.02em] mb-4">Eight years of compounding scope.</h2>
+            <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Career Journey</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] mb-4">Eight years of compounding scope.</h2>
             <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-2xl">Petpooja scaled from a regional tool to India&apos;s largest restaurant tech platform during my tenure — starting in sales, moving through operations, and into product. I&apos;ve operated as de facto Head of Product for the restaurant technology division.</p>
           </AnimatedSection>
 
@@ -528,28 +528,28 @@ export default function Home() {
                 <div className="grid sm:grid-cols-[80px_1fr] gap-4 sm:gap-6">
                   {/* Year column */}
                   <div className="hidden sm:flex flex-col items-center pt-5">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center border border-[#00d4aa]/15 flex-shrink-0" style={{ background: "rgba(0,212,170,0.04)" }}>
-                      <span className="text-[#00d4aa] text-[10px] font-bold leading-tight text-center">{m.year}</span>
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center border border-[#0f766e]/20 flex-shrink-0" style={{ background: "rgba(15,118,110,0.06)" }}>
+                      <span className="text-[#0f766e] text-[10px] font-bold leading-tight text-center">{m.year}</span>
                     </div>
                     {i < careerMilestones.length - 1 && (
-                      <div className="w-px flex-1 mt-3 mb-0" style={{ background: "rgba(255,255,255,0.05)" }} />
+                      <div className="w-px flex-1 mt-3 mb-0" style={{ background: "rgba(0,0,0,0.08)" }} />
                     )}
                   </div>
                   {/* Content card */}
-                  <div className="p-6 rounded-xl border border-white/[0.08] pb-8" style={{ background: cardBg }}>
+                  <div className="p-6 rounded-xl border border-slate-200 pb-8" style={{ background: cardBg }}>
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
-                        <span className="text-[10px] font-semibold text-[#00d4aa]/60 uppercase tracking-[0.12em] block mb-1">{m.period}</span>
-                        <h3 className="text-white font-semibold text-base leading-snug">{m.title}</h3>
+                        <span className="text-[10px] font-semibold text-[#0f766e]/70 uppercase tracking-[0.12em] block mb-1">{m.period}</span>
+                        <h3 className="text-slate-900 font-semibold text-base leading-snug">{m.title}</h3>
                         <p className="text-slate-500 text-xs mt-0.5">{m.company}</p>
                       </div>
-                      <span className="sm:hidden text-[#00d4aa] text-xs font-semibold border border-[#00d4aa]/20 px-2.5 py-1 rounded-lg" style={{ background: "rgba(0,212,170,0.05)" }}>{m.year}</span>
+                      <span className="sm:hidden text-[#0f766e] text-xs font-semibold border border-[#0f766e]/25 px-2.5 py-1 rounded-lg" style={{ background: "rgba(15,118,110,0.07)" }}>{m.year}</span>
                     </div>
-                    <p className="text-slate-400 text-sm leading-[1.75] mb-4">{m.description}</p>
+                    <p className="text-slate-600 text-sm leading-[1.75] mb-4">{m.description}</p>
                     <ul className="space-y-1.5">
                       {m.highlights.map((h) => (
                         <li key={h} className="flex items-start gap-2 text-slate-500 text-xs leading-relaxed">
-                          <CheckCircle2 size={11} className="text-[#00d4aa]/40 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 size={11} className="text-[#0f766e]/50 mt-0.5 flex-shrink-0" />
                           {h}
                         </li>
                       ))}
@@ -562,7 +562,7 @@ export default function Home() {
 
           <AnimatedSection delay={0.4}>
             <div className="mt-6 sm:ml-[104px]">
-              <Link href="/resume" className="inline-flex items-center gap-1.5 text-[#00d4aa] text-sm font-medium hover:gap-2.5 transition-all duration-200">
+              <Link href="/resume" className="inline-flex items-center gap-1.5 text-[#0f766e] text-sm font-medium hover:gap-2.5 transition-all duration-200">
                 View full resume <ArrowRight size={13} />
               </Link>
             </div>
@@ -571,21 +571,21 @@ export default function Home() {
       </section>
 
       {/* ── 8. CONTACT ───────────────────────────────────────────────────── */}
-      <section className="py-24 border-t border-white/[0.06]">
+      <section className="py-24 border-t border-slate-200/70">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
-            <div className="relative rounded-2xl overflow-hidden border border-[#00d4aa]/[0.12]"
-              style={{ background: "linear-gradient(135deg, rgba(0,212,170,0.04) 0%, rgba(129,140,248,0.025) 50%, rgba(255,255,255,0.01) 100%)" }}>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0f766e]/20"
+              style={{ background: "linear-gradient(135deg, rgba(15,118,110,0.05) 0%, rgba(129,140,248,0.04) 50%, rgba(248,250,252,1) 100%)" }}>
               {/* Top edge highlight */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px"
-                style={{ background: "linear-gradient(to right, transparent, rgba(0,212,170,0.35), transparent)" }} />
+                style={{ background: "linear-gradient(to right, transparent, rgba(15,118,110,0.4), transparent)" }} />
               <div className="p-10 md:p-16">
                 <div className="max-w-xl">
-                  <p className="text-[11px] font-semibold text-[#00d4aa] uppercase tracking-[0.14em] mb-5">Contact</p>
-                  <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-[-0.02em] mb-5">
+                  <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Contact</p>
+                  <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-[-0.02em] mb-5">
                     Actively looking for my next role.
                   </h2>
-                  <p className="text-slate-300 leading-[1.8] mb-3">
+                  <p className="text-slate-700 leading-[1.8] mb-3">
                     Targeting Group PM, Head of Product, and Senior PM roles at technology companies building complex operational software, commerce platforms, or SaaS at scale.
                   </p>
                   <p className="text-slate-500 text-sm leading-relaxed mb-10">
@@ -593,11 +593,11 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link href="/contact"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] text-sm font-semibold hover:bg-[#00c49e] transition-colors duration-200">
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#0f172a] text-sm font-semibold hover:bg-[#00c49e] transition-colors duration-200">
                       Get in touch <ArrowRight size={15} />
                     </Link>
                     <a href="mailto:sandy.show18@gmail.com"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-slate-300 text-sm font-medium hover:border-white/20 hover:text-white transition-all duration-200">
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-900 transition-all duration-200">
                       sandy.show18@gmail.com
                     </a>
                   </div>

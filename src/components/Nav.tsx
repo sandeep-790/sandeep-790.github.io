@@ -29,7 +29,7 @@ export function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#020817]/90 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-xl border-b border-slate-200/80" : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -38,8 +38,8 @@ export function Nav() {
             S
           </div>
           <div className="flex flex-col">
-            <span className="text-white font-semibold text-sm leading-none">Sandeep Kurapati</span>
-            <span className="text-slate-600 text-xs leading-none mt-0.5">Product Leader · Restaurant Technology</span>
+            <span className="text-slate-900 font-semibold text-sm leading-none">Sandeep Kurapati</span>
+            <span className="text-slate-500 text-xs leading-none mt-0.5">Product Leader · Restaurant Technology</span>
           </div>
         </Link>
 
@@ -52,8 +52,8 @@ export function Nav() {
                   href={link.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     active
-                      ? "text-[#00d4aa] bg-[#00d4aa]/10"
-                      : "text-slate-400 hover:text-white hover:bg-white/5"
+                      ? "text-[#0f766e] bg-[#0f766e]/10"
+                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-900/5"
                   }`}
                 >
                   {link.label}
@@ -65,13 +65,13 @@ export function Nav() {
 
         <Link
           href="/contact"
-          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-[#00d4aa]/30 text-[#00d4aa] text-sm font-medium hover:bg-[#00d4aa]/10 transition-all duration-200"
+          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-[#0f766e]/40 text-[#0f766e] text-sm font-medium hover:bg-[#0f766e]/8 transition-all duration-200"
         >
           Let&apos;s talk
         </Link>
 
         <button
-          className="md:hidden text-slate-400 hover:text-white p-2"
+          className="md:hidden text-slate-500 hover:text-slate-900 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -85,7 +85,7 @@ export function Nav() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0a0f1e]/95 backdrop-blur-xl border-b border-white/5"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200"
           >
             <ul className="px-6 py-4 space-y-1">
               {links.map((link) => {
@@ -96,7 +96,7 @@ export function Nav() {
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
                       className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        active ? "text-[#00d4aa] bg-[#00d4aa]/10" : "text-slate-400 hover:text-white"
+                        active ? "text-[#0f766e] bg-[#0f766e]/10" : "text-slate-500 hover:text-slate-900"
                       }`}
                     >
                       {link.label}
