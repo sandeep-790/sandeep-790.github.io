@@ -61,11 +61,11 @@ const productDomains = [
 
 const heroMetrics = [
   { value: "1,00,000+", label: "Restaurant outlets", sub: "Petpooja platform" },
-  { value: "12+",     label: "Product lines owned", sub: "Full end-to-end ownership" },
-  { value: "47s→18s", label: "POS checkout time", sub: "Data model redesign" },
-  { value: "3d→4hr",  label: "Menu propagation", sub: "Automated multi-channel sync" },
-  { value: "40+",     label: "Integrations live", sub: "9-day partner onboarding" },
-  { value: "99.7%",   label: "Platform uptime", sub: "Up from 98.1%" },
+  { value: "3d→4hr",   label: "Menu propagation", sub: "Automated multi-channel sync" },
+  { value: "150+",     label: "Partner integrations", sub: "1-week onboarding" },
+  { value: "99.6%",    label: "Order pipeline reliability", sub: "End-to-end, peak load" },
+  { value: "2M+",      label: "Monthly dine-in sessions", sub: "QR menu & table ordering" },
+  { value: "97.4%",    label: "UPI success rate", sub: "Up from 93.1%" },
 ];
 
 const featuredCaseStudies = [
@@ -75,26 +75,26 @@ const featuredCaseStudies = [
     title: "Catalog Management Platform",
     problem: "A 200-outlet chain was spending 3 days manually propagating a single price change across aggregators, POS terminals, and the website — with inconsistencies at every step.",
     insight: "The problem wasn't coordination — it was architecture. A shared catalog with an automated propagation engine made consistency a system property, not a manual discipline.",
-    outcome: "Menu propagation: 3 days → 4 hours. 15,000+ outlets on unified catalog. Manual ops effort −78%.",
+    outcome: "Menu propagation: 3 days → 4 hours. 1,00,000+ outlets on unified catalog. Manual ops effort −78%.",
     tags: ["Catalog Architecture", "Multi-channel Sync", "Data Infrastructure"],
   },
   {
     id: "integrations-platform",
     num: "02",
-    title: "Restaurant Integrations Platform",
-    problem: "Every new aggregator integration was a 6-week custom engineering project. The integration team was permanently backlogged and had no leverage as the partner ecosystem grew.",
+    title: "Partner Integration Platform",
+    problem: "Every new aggregator integration was a 5-week custom engineering project. The integration team was permanently backlogged and had no leverage as the partner ecosystem grew.",
     insight: "Treating integrations as a product — canonical events, adapter pattern, production-fidelity sandbox — made each new partner a configuration exercise, not a project.",
-    outcome: "Onboarding: 6 weeks → 9 days. 40+ integrations. 99.4% order acceptance rate.",
+    outcome: "Onboarding: 5 weeks → 1 week. 150+ integrations live. 99.4% order acceptance rate.",
     tags: ["API Platform", "Partner Ecosystem", "Operational Automation"],
   },
   {
-    id: "restaurant-pos",
-    num: "03",
-    title: "Restaurant POS Platform",
-    problem: "Billing, kitchen, table management, and payment were four disconnected systems. Staff re-keyed at every boundary. Errors accumulated. Checkout averaged 47 seconds.",
-    insight: "One order data model shared across all modules eliminates the re-keying steps that were both the time overhead and the source of errors.",
-    outcome: "Checkout: 47s → 18s. Billing errors −34%. 4,200+ outlets. 99.3% uptime.",
-    tags: ["POS", "Restaurant Ops", "Offline-First"],
+    id: "online-ordering-backend",
+    num: "04",
+    title: "Online Ordering Backend Architecture",
+    problem: "The online ordering pipeline had frequent, undetected failures under load. Orders silently dropped. Merchants discovered issues from customer complaints — not from monitoring.",
+    insight: "Reliability at this scale isn't a feature — it's an architecture property. Layered fallbacks, idempotent retries, and a dedicated alerting pipeline made failure detection a system responsibility, not a manual one.",
+    outcome: "99.6% order pipeline reliability. <60s failure detection. 0 silent order drops. MTTD: 6hrs → 8min.",
+    tags: ["Backend Architecture", "Reliability Engineering", "Event-Driven Systems"],
   },
 ];
 
@@ -128,7 +128,7 @@ const philosophy = [
 const techExpertise = [
   {
     area: "Data Architecture",
-    description: "Hierarchical data models, inheritance patterns, multi-tenant schema design. I've designed catalog schemas that serve 15,000 outlets simultaneously from a single canonical store.",
+    description: "Hierarchical data models, inheritance patterns, multi-tenant schema design. I've designed catalog schemas that serve 1,00,000+ outlets simultaneously from a single canonical store.",
     items: ["Hierarchical data models", "Schema versioning", "Multi-tenant design", "Event sourcing"],
   },
   {
@@ -148,7 +148,7 @@ const techExpertise = [
   },
   {
     area: "Platform Scalability",
-    description: "Domain service decomposition, circuit breakers, cascading failure prevention. I defined the service boundaries that took platform uptime from 98.1% to 99.7%.",
+    description: "Domain service decomposition, circuit breakers, cascading failure prevention. I designed the backend architecture that drives 99.6% order pipeline reliability at peak load.",
     items: ["Domain decomposition", "Circuit breakers", "Service contracts", "Deployment independence"],
   },
   {
@@ -173,7 +173,7 @@ const careerMilestones = [
     title: "Product Manager",
     company: "Petpooja",
     description: "Transitioned into product to own merchant-facing tools, the integration platform, GST compliance system, finance enablement, and the Android restaurant application fleet.",
-    highlights: ["GST standardization — 67% compliance error reduction", "Integration platform — 6 wks → 9 days onboarding", "Android fleet: 99.1% crash-free rate across 8,500+ devices"],
+    highlights: ["GST standardization — 67% compliance error reduction", "Partner integration platform — 5 wks → 1 week onboarding, 150+ integrations", "Android fleet: 99.1% crash-free rate across 8,500+ devices"],
   },
   {
     year: "2024",
@@ -181,7 +181,7 @@ const careerMilestones = [
     title: "Senior Product Manager — Restaurant Technology",
     company: "Petpooja",
     description: "Lead the full restaurant technology stack — POS, catalog, online ordering, dine-in, multi-brand, integration platform, and backend architecture. Operating as de facto Head of Product for the division. 1,00,000+ outlets across all products.",
-    highlights: ["POS ecosystem: 47s → 18s checkout across 4,200 outlets", "Catalog platform: 3 days → 4 hrs propagation", "Platform uptime 99.7% (from 98.1%), cascading failures −82%"],
+    highlights: ["Catalog platform: 3 days → 4 hrs propagation across 1,00,000+ outlets", "Online ordering reliability: 99.6% pipeline, 6hrs → 8min MTTD", "UPI success rate: 97.4% (up from 93.1%), 97.4% automated reconciliation"],
   },
 ];
 
@@ -407,7 +407,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] max-w-xl">The problem, the decision, the outcome.</h2>
               <Link href="/case-studies" className="text-slate-500 text-sm hover:text-[#0f766e] transition-colors flex items-center gap-1.5 flex-shrink-0">
-                All 9 case studies <ArrowRight size={13} />
+                All 8 case studies <ArrowRight size={13} />
               </Link>
             </div>
           </AnimatedSection>
