@@ -44,7 +44,6 @@ const sections = [
     projects: [
       {
         id: "restaurant-pos",
-        icon: "🍽️",
         num: "01",
         title: "Restaurant POS Ecosystem",
         tagline: "Unified billing, kitchen, table management, and checkout — one order data model across 4,200+ restaurants.",
@@ -61,7 +60,6 @@ const sections = [
       },
       {
         id: "android-apps",
-        icon: "📱",
         num: "02",
         title: "Android Restaurant Applications",
         tagline: "Role-specific apps for every position in a restaurant — designed for constrained hardware and operational pressure.",
@@ -83,7 +81,6 @@ const sections = [
     projects: [
       {
         id: "catalog-management",
-        icon: "📋",
         num: "03",
         title: "Catalog Management System",
         tagline: "One menu change. Every outlet, aggregator, and ordering channel updated automatically.",
@@ -100,7 +97,6 @@ const sections = [
       },
       {
         id: "online-ordering",
-        icon: "🌐",
         num: "04",
         title: "Online Ordering Ecosystem",
         tagline: "Orders from every channel — web, app, aggregators, QR — flowing directly into the POS and kitchen without manual entry.",
@@ -117,7 +113,6 @@ const sections = [
       },
       {
         id: "dine-in-tech",
-        icon: "🪑",
         num: "05",
         title: "Dine-In Technology & QR Menu Platform",
         tagline: "Contactless ordering, table-side payment, and live menus — the guest experience improved, the service pressure reduced.",
@@ -139,7 +134,6 @@ const sections = [
     projects: [
       {
         id: "multi-brand",
-        icon: "🏢",
         num: "06",
         title: "Multi-Brand Operations Platform",
         tagline: "Centralised control for restaurant groups — 20 to 200 outlets — without sacrificing outlet-level flexibility.",
@@ -156,7 +150,6 @@ const sections = [
       },
       {
         id: "integration-platform",
-        icon: "🔗",
         num: "07",
         title: "Integration Platform",
         tagline: "Third-party integrations as a repeatable product — not a custom engineering engagement per partner.",
@@ -173,7 +166,6 @@ const sections = [
       },
       {
         id: "backend-architecture",
-        icon: "⚙️",
         num: "08",
         title: "Backend Platform Architecture",
         tagline: "Service boundaries and shared foundations — 12 product lines that deploy independently without cascading each other.",
@@ -195,7 +187,6 @@ const sections = [
     projects: [
       {
         id: "gst-compliance",
-        icon: "🧾",
         num: "09",
         title: "GST Standardization & Compliance",
         tagline: "Automated GST compliance built into the POS — not a separate tool merchants have to reconcile manually.",
@@ -212,7 +203,6 @@ const sections = [
       },
       {
         id: "finance-enablement",
-        icon: "💼",
         num: "10",
         title: "Finance Enablement Products",
         tagline: "Every rupee traceable from transaction to bank account — settlement, reconciliation, and payout visibility in one layer.",
@@ -235,7 +225,6 @@ const sections = [
     projects: [
       {
         id: "payment-infrastructure",
-        icon: "💳",
         num: "11",
         title: "Payment Infrastructure",
         tagline: "UPI, QR, and EDC acceptance across the restaurant ecosystem — reliability at the counter, not the developer console.",
@@ -288,14 +277,11 @@ export default function Projects() {
                     <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 card-hover bg-white">
                       <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                         <div className="flex items-start gap-4 sm:w-2/3">
-                          <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(15,118,110,0.08)" }}>
-                            {project.icon}
+                          <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#0f766e]/15" style={{ background: "rgba(15,118,110,0.06)" }}>
+                            <span className="text-[#0f766e] text-sm font-bold font-mono tracking-tight">{project.num}</span>
                           </div>
                           <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-1">
-                              <span className="text-xs text-slate-400 font-mono">{project.num}</span>
-                              <h3 className="text-slate-900 font-semibold text-lg">{project.title}</h3>
-                            </div>
+                            <h3 className="text-slate-900 font-semibold text-lg mb-1">{project.title}</h3>
                             <p className="text-[#0f766e] text-sm mb-3">{project.tagline}</p>
                             <p className="text-slate-600 text-sm leading-relaxed mb-4">{project.description}</p>
                             <ul className="space-y-1.5">

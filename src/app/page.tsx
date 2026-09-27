@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Layers, Settings, Zap, TrendingUp } from "lucide-react";
@@ -12,7 +12,6 @@ const productDomains = [
   {
     title: "Restaurant Operations",
     color: "#00d4aa",
-    icon: "🍽️",
     capabilities: [
       "Restaurant POS Systems",
       "KOT & Kitchen Management",
@@ -24,7 +23,6 @@ const productDomains = [
   {
     title: "Commerce & Ordering",
     color: "#818cf8",
-    icon: "🛒",
     capabilities: [
       "Catalog Management Systems",
       "Online Ordering Ecosystems",
@@ -36,7 +34,6 @@ const productDomains = [
   {
     title: "Platform & Integration",
     color: "#00d4aa",
-    icon: "⚙️",
     capabilities: [
       "Backend Platform Architecture",
       "Integration Platform & APIs",
@@ -48,7 +45,6 @@ const productDomains = [
   {
     title: "Merchant Solutions",
     color: "#818cf8",
-    icon: "💼",
     capabilities: [
       "Finance Enablement Products",
       "Settlement & Reconciliation",
@@ -192,6 +188,11 @@ const cardBg2 = "rgba(248,250,252,0.95)";
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Home() {
+  const { scrollY } = useScroll();
+  const glow1Y = useTransform(scrollY, [0, 700], [0, -80]);
+  const glow2Y = useTransform(scrollY, [0, 700], [0, 50]);
+  const heroContentY = useTransform(scrollY, [0, 500], [0, -30]);
+
   return (
     <div className="bg-[#f8fafc]">
 
@@ -204,13 +205,16 @@ export default function Home() {
             backgroundSize: "64px 64px",
           }}
         />
-        {/* Ambient glow */}
-        <div className="absolute top-1/4 right-1/3 w-[600px] h-[600px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%)" }} />
-        <div className="absolute bottom-1/3 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(129,140,248,0.07) 0%, transparent 70%)" }} />
+        {/* Ambient glow — parallax */}
+        <motion.div className="absolute top-1/4 right-1/3 w-[700px] h-[700px] rounded-full pointer-events-none float-orb"
+          style={{ background: "radial-gradient(circle, rgba(0,212,170,0.1) 0%, transparent 65%)", y: glow1Y }} />
+        <motion.div className="absolute bottom-1/3 left-1/4 w-[560px] h-[560px] rounded-full pointer-events-none float-orb-reverse"
+          style={{ background: "radial-gradient(circle, rgba(129,140,248,0.09) 0%, transparent 65%)", y: glow2Y }} />
+        {/* Extra depth glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[300px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(0,212,170,0.04) 0%, transparent 60%)" }} />
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
+        <motion.div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20 w-full" style={{ y: heroContentY }}>
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
 
             {/* ── Left column ── */}
@@ -218,19 +222,22 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45 }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 className="flex items-center gap-2.5 mb-7"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0f766e] animate-pulse flex-shrink-0" />
+                <span className="relative flex h-2 w-2 flex-shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00d4aa] opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0f766e]" />
+                </span>
                 <span className="text-[#0f766e] text-[11px] font-semibold uppercase tracking-[0.14em]">
                   Group PM · Head of Product · Senior PM
                 </span>
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.07 }}
+                initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="text-5xl sm:text-6xl lg:text-[64px] xl:text-7xl font-bold text-slate-900 leading-[1.0] tracking-[-0.03em] mb-6"
               >
                 Product leadership<br />
@@ -238,18 +245,18 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.16 }}
+                initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="text-slate-600 text-lg leading-[1.8] mb-8 max-w-xl"
               >
                 Eight years at Petpooja — India&apos;s largest restaurant tech platform — building the technology ecosystem serving 1,00,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
               </motion.p>
 
               <motion.p
-                initial={{ opacity: 0, y: 14 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.22 }}
+                transition={{ duration: 0.5, delay: 0.28 }}
                 className="text-[#0f766e]/80 text-sm mb-8"
               >
                 Now looking for my next role as a Group Product Manager or Head of Product.
@@ -258,15 +265,15 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.28 }}
+                transition={{ duration: 0.5, delay: 0.36 }}
                 className="flex flex-wrap gap-3"
               >
                 <Link href="/case-studies"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] text-sm font-semibold hover:bg-[#00c49e] transition-colors duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#00d4aa] text-[#020817] text-sm font-semibold hover:bg-[#00c49e] hover:shadow-lg hover:shadow-[#00d4aa]/25 hover:-translate-y-0.5 transition-all duration-200 shimmer-on-hover">
                   Read case studies <ArrowRight size={15} />
                 </Link>
                 <Link href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-900 transition-all duration-200">
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 text-slate-600 text-sm font-medium hover:border-[#0f766e]/40 hover:text-slate-900 hover:-translate-y-0.5 transition-all duration-200">
                   About me
                 </Link>
               </motion.div>
@@ -274,13 +281,13 @@ export default function Home() {
 
             {/* ── Right column — hero image + metrics card ── */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.35 }}
+              initial={{ opacity: 0, x: 24, filter: "blur(8px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.85, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
               className="hidden lg:block"
             >
               <div className="space-y-4">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200" style={{ height: "220px" }}>
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-slate-200/80" style={{ height: "220px" }}>
                 <Image
                   src="/images/hero-platform-topology.png"
                   alt="Platform topology diagram showing Petpooja's restaurant technology ecosystem — POS, catalog, ordering, integrations, and finance layers"
@@ -289,24 +296,31 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="rounded-2xl border border-slate-200 overflow-hidden" style={{ background: cardBg }}>
+              <div className="rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm" style={{ background: cardBg }}>
                 {/* Card header */}
-                <div className="flex items-center gap-2 px-5 py-4 border-b border-slate-200">
+                <div className="flex items-center gap-2 px-5 py-4 border-b border-slate-200/80">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0f766e]" />
                   <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-[0.13em]">Platform Impact</p>
                 </div>
                 {/* Metrics grid */}
                 <div className="grid grid-cols-2 gap-px bg-slate-200/60">
-                  {heroMetrics.map((m) => (
-                    <div key={m.label} className="px-5 py-5" style={{ background: cardBg2 }}>
+                  {heroMetrics.map((m, idx) => (
+                    <motion.div
+                      key={m.label}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.55 + idx * 0.07 }}
+                      className="px-5 py-5"
+                      style={{ background: cardBg2 }}
+                    >
                       <div className="text-[22px] font-bold text-slate-900 metric-value mb-1">{m.value}</div>
                       <div className="text-slate-600 text-xs leading-snug">{m.label}</div>
                       <div className="text-slate-400 text-[11px] mt-0.5">{m.sub}</div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
                 {/* Card footer */}
-                <div className="px-5 py-3.5 border-t border-slate-200">
+                <div className="px-5 py-3.5 border-t border-slate-200/80">
                   <p className="text-slate-400 text-[11px]">Restaurant Technology · Commerce Platforms · Platform Architecture</p>
                 </div>
               </div>
@@ -314,7 +328,7 @@ export default function Home() {
             </motion.div>
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ── 2. ABOUT ─────────────────────────────────────────────────────── */}
@@ -379,10 +393,17 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {productDomains.map((domain, i) => (
               <AnimatedSection key={domain.title} delay={i * 0.07}>
-                <div className="p-6 rounded-xl border border-slate-200 h-full card-hover" style={{ background: cardBg }}>
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="text-xl">{domain.icon}</span>
-                    <h3 className="text-slate-900 font-medium text-sm leading-tight">{domain.title}</h3>
+                <div className="p-6 rounded-xl border border-slate-200 h-full card-hover relative overflow-hidden" style={{ background: cardBg }}>
+                  {/* Colored top accent line */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] rounded-t-xl" style={{ background: `linear-gradient(to right, ${domain.color}, transparent)` }} />
+                  <div className="mb-5 pt-2">
+                    <span
+                      className="block text-[52px] font-black leading-none select-none mb-3 tracking-tight"
+                      style={{ color: domain.color, opacity: 0.1 }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-slate-900 font-semibold text-sm leading-tight">{domain.title}</h3>
                   </div>
                   <ul className="space-y-2.5">
                     {domain.capabilities.map((cap) => (
@@ -415,35 +436,38 @@ export default function Home() {
           <div className="space-y-3">
             {featuredCaseStudies.map((cs, i) => (
               <AnimatedSection key={cs.id} delay={i * 0.08}>
-                <div className="rounded-xl border border-slate-200 card-hover overflow-hidden" style={{ background: cardBg }}>
-                  <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
+                <div className="rounded-xl border border-slate-200 card-hover overflow-hidden relative" style={{ background: cardBg }}>
+                  {/* Left accent bar */}
+                  <div className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-xl" style={{ background: "linear-gradient(to bottom, #00d4aa, #818cf8)" }} />
+                  <div className="grid lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-200/80 pl-[3px]">
                     {/* Problem */}
                     <div className="p-7">
-                      <div className="flex items-center gap-2.5 mb-4">
-                        <span className="text-[11px] text-slate-400 font-mono tracking-wider">{cs.num}</span>
-                        <h3 className="text-slate-900 font-semibold text-base leading-tight">{cs.title}</h3>
+                      <div className="flex items-center gap-3 mb-5">
+                        <span className="text-[11px] text-slate-300 font-mono tracking-widest">{cs.num}</span>
+                        <div className="h-px flex-1 bg-slate-200/80" />
                       </div>
+                      <h3 className="text-slate-900 font-bold text-base leading-snug mb-4">{cs.title}</h3>
                       <p className="text-[10px] text-[#0f766e] font-semibold uppercase tracking-[0.12em] mb-3">The Problem</p>
                       <p className="text-slate-600 text-sm leading-[1.75]">{cs.problem}</p>
                     </div>
                     {/* Insight */}
                     <div className="p-7">
-                      <p className="text-[10px] text-[#818cf8] font-semibold uppercase tracking-[0.12em] mb-3">The Insight</p>
+                      <p className="text-[10px] text-[#818cf8] font-semibold uppercase tracking-[0.12em] mb-3 mt-[52px] lg:mt-0">The Insight</p>
                       <p className="text-slate-600 text-sm leading-[1.75]">{cs.insight}</p>
                     </div>
                     {/* Outcome */}
                     <div className="p-7">
-                      <p className="text-[10px] text-[#0f766e] font-semibold uppercase tracking-[0.12em] mb-3">The Outcome</p>
+                      <p className="text-[10px] text-[#0f766e] font-semibold uppercase tracking-[0.12em] mb-3 mt-0 lg:mt-0">The Outcome</p>
                       <p className="text-slate-800 text-sm leading-[1.75] font-medium mb-5">{cs.outcome}</p>
                       <div className="flex flex-wrap gap-1.5 mb-5">
                         {cs.tags.map((t) => (
-                          <span key={t} className="px-2.5 py-0.5 rounded-full text-[11px] border border-slate-200 text-slate-500" style={{ background: "rgba(0,0,0,0.02)" }}>
+                          <span key={t} className="px-2.5 py-1 rounded-full text-[11px] border border-slate-200/80 text-slate-500" style={{ background: "rgba(0,0,0,0.02)" }}>
                             {t}
                           </span>
                         ))}
                       </div>
-                      <Link href="/case-studies" className="inline-flex items-center gap-1 text-[#0f766e] text-sm font-medium hover:gap-2 transition-all duration-200">
-                        Full case study <ArrowUpRight size={13} />
+                      <Link href="/case-studies" className="inline-flex items-center gap-1.5 text-[#0f766e] text-sm font-semibold hover:gap-3 transition-all duration-200 group">
+                        Full case study <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
                       </Link>
                     </div>
                   </div>
