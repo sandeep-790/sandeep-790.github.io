@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -222,6 +223,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} bg-[#f8fafc] text-slate-900 antialiased`}
       >
+        <ScrollProgress />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

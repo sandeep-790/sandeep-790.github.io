@@ -14,7 +14,6 @@ type Section = {
 type CaseStudy = {
   id: string;
   num: string;
-  icon: string;
   title: string;
   category: string;
   summary: string;
@@ -28,7 +27,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "catalog-management",
     num: "01",
-    icon: "📋",
     title: "Catalog Management Platform",
     category: "Menu Management · Catalog Architecture · Multi-Outlet · Data Standardization",
     summary: "Built the catalog infrastructure serving as the single source of truth for menus across 1,00,000+ restaurant outlets. A change that took 3 days to propagate across a 200-outlet chain now takes under 4 hours — automated, auditable, and consistent across every channel simultaneously.",
@@ -80,7 +78,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "integrations-platform",
     num: "02",
-    icon: "🔗",
     title: "Partner Integration Platform",
     category: "Third-Party Integrations · Partner Ecosystem · APIs · Operational Automation",
     summary: "Rebuilt third-party integrations from bespoke engineering projects into a repeatable platform product. Partner onboarding reduced from 5 weeks to 1 week. 150+ active integrations running with 99.4% order acceptance rate and under 1-minute menu sync latency.",
@@ -131,7 +128,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "gst-standardization",
     num: "03",
-    icon: "🧾",
     title: "GST Standardization Initiative",
     category: "Tax Compliance · Product Standardization · Merchant Impact · Regulatory Requirements",
     summary: "Built GST compliance into the POS and catalog workflow — not as a separate tool. HSN mapping engine, configurable tax rule system, and GSTR reporting generated directly from transaction data. Compliance errors down 67% across 10,000+ merchants; compliance is now a byproduct of normal operations, not a separate monthly effort.",
@@ -183,7 +179,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "online-ordering",
     num: "04",
-    icon: "🌐",
     title: "Online Ordering Backend Architecture",
     category: "Backend Systems · Reliability Engineering · Fallback Design · Real-time Order Processing",
     summary: "Rebuilt the entire backend infrastructure handling online orders on the Petpooja platform — from ingestion layers and fallback mechanisms to downtime handling and real-time monitoring. Frequent order pipeline failures and silent drops were causing merchant churn. Platform now handles peak order volumes with 99.6% pipeline reliability and sub-60s end-to-end order-to-kitchen latency.",
@@ -236,7 +231,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "qr-dine-in",
     num: "05",
-    icon: "🪑",
     title: "QR Menu & Dine-In Platform",
     category: "Customer Experience · Restaurant Operations · Digital Ordering",
     summary: "Built the full dine-in technology stack — QR menus with live availability, table-side ordering, and pay-at-table flows — designed to reduce peak-hour service pressure without degrading hospitality. Table turn time improved 19% at pilot outlets. 2M+ monthly sessions across the platform.",
@@ -288,7 +282,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "finance-platform",
     num: "06",
-    icon: "💳",
     title: "Embedded Finance & Payments Platform",
     category: "EDC Integration · QR Payments · Loans · Expense Management · Settlement Architecture",
     summary: "Built Petpooja's full financial infrastructure layer — from the backend architecture powering EDC and QR payment integrations, to embedded financial products including working capital loans, expense management, and payout visibility. Settlement support tickets down 41%. UPI success rate 97.4%. 94% of payments auto-reconciled. Loans and expense products embedded directly in the POS workflow.",
@@ -341,7 +334,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "android-apps",
     num: "07",
-    icon: "📱",
     title: "Android Restaurant Applications",
     category: "Captain App · KDS · Billing Terminal · Fleet Management · Offline-first",
     summary: "Owned the Android application product line for restaurant operations — billing terminals, captain order-taking, kitchen display systems (KDS), and owner dashboards — across 8,500+ active devices. Built for constrained hardware, unreliable networks, and staff who cannot pause service to troubleshoot. 99.1% crash-free session rate across all four apps.",
@@ -394,7 +386,6 @@ const caseStudies: CaseStudy[] = [
   {
     id: "kiosk-ordering",
     num: "08",
-    icon: "🖥️",
     title: "Kiosk Ordering Platform",
     category: "Self-Ordering · Kiosk Hardware · Intraserver APIs · QSR Operations",
     summary: "Reshaped Petpooja's kiosk ordering product from a standalone touchscreen UI into a fully integrated self-ordering platform. Redesigned the intraserver order API layer to handle kiosk-originated orders identically to POS and online orders. Kiosk order throughput at QSR pilots 2.3x counter throughput per terminal during peak. Average order value 18% higher than counter orders.",
@@ -479,14 +470,11 @@ function CaseStudyCard({ cs }: { cs: CaseStudy }) {
         <div className="p-7 sm:p-8">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-start gap-5 flex-1 min-w-0">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style={{ background: "rgba(15,118,110,0.08)" }}>
-              {cs.icon}
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-[#0f766e]/15" style={{ background: "rgba(15,118,110,0.06)" }}>
+              <span className="text-[#0f766e] text-sm font-bold font-mono tracking-tight">{cs.num}</span>
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-3 mb-1.5">
-                <span className="text-xs text-slate-400 font-mono">{cs.num}</span>
-                <h3 className="text-slate-900 font-bold text-xl">{cs.title}</h3>
-              </div>
+              <h3 className="text-slate-900 font-bold text-xl mb-1.5">{cs.title}</h3>
               <p className="text-slate-500 text-xs mb-3 tracking-wide">{cs.category}</p>
               <p className="text-slate-600 text-sm leading-relaxed max-w-2xl">{cs.summary}</p>
             </div>
