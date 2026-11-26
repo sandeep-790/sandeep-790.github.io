@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Products — Restaurant POS, Catalog Management & Commerce Platform Portfolio",
   description:
-    "12+ restaurant technology products built by Sandeep Kurapati at Petpooja — POS solutions, catalog management systems, online ordering ecosystems, QR dine-in technology, integrations platform, Android restaurant applications, multi-brand operations, and backend platform architecture. Full-stack merchant technology product portfolio.",
+    "12+ restaurant technology products built by Sandeep Kurapati — POS solutions, catalog management systems, online ordering ecosystems, QR dine-in technology, integrations platform, Android restaurant applications, multi-brand operations, and backend platform architecture. Full-stack merchant technology product portfolio.",
   keywords: [
     "restaurant POS solutions",
     "catalog management system",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     url: "https://sandeepkurapati.com/projects",
     title: "Products — Restaurant POS, Catalog Management & Commerce Platform Portfolio",
     description:
-      "12+ restaurant technology products built at Petpooja — POS solutions, catalog management systems, online ordering ecosystems, integrations platform, Android restaurant applications, and backend platform architecture serving 1,00,000+ outlets.",
+      "12+ restaurant technology products — POS solutions, catalog management systems, online ordering ecosystems, integrations platform, Android restaurant applications, and backend platform architecture serving 1,00,000+ outlets.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Products — Restaurant POS, Catalog Management & Commerce Platform Portfolio",
     description:
-      "12+ restaurant technology products built at Petpooja — POS solutions, catalog management, online ordering, integrations platform, Android apps, and backend architecture.",
+      "12+ restaurant technology products — POS solutions, catalog management, online ordering, integrations platform, Android apps, and backend architecture.",
   },
 };
 

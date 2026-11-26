@@ -56,7 +56,7 @@ const productDomains = [
 ];
 
 const heroMetrics = [
-  { value: "1,00,000+", label: "Restaurant outlets", sub: "Petpooja platform" },
+  { value: "1,00,000+", label: "Restaurant outlets", sub: "Restaurant tech platform" },
   { value: "3d→4hr",   label: "Menu propagation", sub: "Automated multi-channel sync" },
   { value: "150+",     label: "Partner integrations", sub: "1-week onboarding" },
   { value: "99.6%",    label: "Order pipeline reliability", sub: "End-to-end, peak load" },
@@ -250,7 +250,7 @@ export default function Home() {
                 transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="text-slate-600 text-lg leading-[1.8] mb-8 max-w-xl"
               >
-                Eight years at Petpooja — India&apos;s largest restaurant tech platform — building the technology ecosystem serving 1,00,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
+                Eight years building the technology ecosystem at India&apos;s largest restaurant tech platform — serving 1,00,000+ outlets. I own products end-to-end: strategy, system architecture, cross-functional execution, and the metrics that confirm whether you were right.
               </motion.p>
 
               <motion.p
@@ -290,7 +290,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-slate-200/80" style={{ height: "220px" }}>
                 <Image
                   src="/images/hero-platform-topology.png"
-                  alt="Platform topology diagram showing Petpooja's restaurant technology ecosystem — POS, catalog, ordering, integrations, and finance layers"
+                  alt="Platform topology diagram showing the restaurant technology ecosystem — POS, catalog, ordering, integrations, and finance layers"
                   fill
                   className="object-cover"
                   priority
@@ -543,7 +543,7 @@ export default function Home() {
           <AnimatedSection>
             <p className="text-[11px] font-semibold text-[#0f766e] uppercase tracking-[0.14em] mb-5">Career Journey</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-[-0.02em] mb-4">Eight years of compounding scope.</h2>
-            <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-2xl">Petpooja scaled from a regional tool to India&apos;s largest restaurant tech platform during my tenure — starting in sales, moving through operations, and into product. I&apos;ve operated as de facto Head of Product for the restaurant technology division.</p>
+            <p className="text-slate-500 text-sm leading-relaxed mb-12 max-w-2xl">The platform scaled from a regional tool to India&apos;s largest restaurant tech platform during my tenure — starting in sales, moving through operations, and into product. I&apos;ve operated as de facto Head of Product for the restaurant technology division.</p>
           </AnimatedSection>
 
           <div className="space-y-3">
