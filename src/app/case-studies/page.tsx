@@ -181,7 +181,7 @@ const caseStudies: CaseStudy[] = [
     num: "04",
     title: "Online Ordering Backend Architecture",
     category: "Backend Systems · Reliability Engineering · Fallback Design · Real-time Order Processing",
-    summary: "Rebuilt the entire backend infrastructure handling online orders on the Petpooja platform — from ingestion layers and fallback mechanisms to downtime handling and real-time monitoring. Frequent order pipeline failures and silent drops were causing merchant churn. Platform now handles peak order volumes with 99.6% pipeline reliability and sub-60s end-to-end order-to-kitchen latency.",
+    summary: "Rebuilt the entire backend infrastructure handling online orders — from ingestion layers and fallback mechanisms to downtime handling and real-time monitoring. Frequent order pipeline failures and silent drops were causing merchant churn. Platform now handles peak order volumes with 99.6% pipeline reliability and sub-60s end-to-end order-to-kitchen latency.",
     metrics: [
       { label: "Order pipeline reliability", value: "99.6%" },
       { label: "Order-to-kitchen latency", value: "<60 sec" },
@@ -284,7 +284,7 @@ const caseStudies: CaseStudy[] = [
     num: "06",
     title: "Embedded Finance & Payments Platform",
     category: "EDC Integration · QR Payments · Loans · Expense Management · Settlement Architecture",
-    summary: "Built Petpooja's full financial infrastructure layer — from the backend architecture powering EDC and QR payment integrations, to embedded financial products including working capital loans, expense management, and payout visibility. Settlement support tickets down 41%. UPI success rate 97.4%. 94% of payments auto-reconciled. Loans and expense products embedded directly in the POS workflow.",
+    summary: "Built the platform's full financial infrastructure layer — from the backend architecture powering EDC and QR payment integrations, to embedded financial products including working capital loans, expense management, and payout visibility. Settlement support tickets down 41%. UPI success rate 97.4%. 94% of payments auto-reconciled. Loans and expense products embedded directly in the POS workflow.",
     metrics: [
       { label: "Settlement tickets", value: "−41%" },
       { label: "UPI success rate", value: "97.4%" },
@@ -295,12 +295,12 @@ const caseStudies: CaseStudy[] = [
     sections: [
       {
         title: "The Problem",
-        content: "Payment infrastructure at Petpooja was fragmented across three layers with no coherent product thinking. EDC terminals were onboarded via manual provisioning with no remote monitoring. UPI was failing 7% of attempts silently. Settlements from multiple PSPs didn't reconcile against POS totals without manual work. And beyond payments, merchants had no access to financial products — loans, expense tracking, or payout advances — from within the platform they used daily.",
+        content: "Payment infrastructure was fragmented across three layers with no coherent product thinking. EDC terminals were onboarded via manual provisioning with no remote monitoring. UPI was failing 7% of attempts silently. Settlements from multiple PSPs didn't reconcile against POS totals without manual work. And beyond payments, merchants had no access to financial products — loans, expense tracking, or payout advances — from within the platform they used daily.",
         bullets: [
           "UPI success rate at baseline: 93.1% — bank-side timeouts with no retry or routing intelligence",
           "EDC terminal failures discovered post-fact — no heartbeat monitoring, no proactive alerting",
           "Monthly PSP settlements not matching POS totals — 41% of support tickets were finance-related",
-          "No embedded financial products: merchants sourcing loans and expense tools entirely outside Petpooja",
+          "No embedded financial products: merchants sourcing loans and expense tools entirely outside the platform",
         ],
       },
       {
@@ -388,7 +388,7 @@ const caseStudies: CaseStudy[] = [
     num: "08",
     title: "Kiosk Ordering Platform",
     category: "Self-Ordering · Kiosk Hardware · Intraserver APIs · QSR Operations",
-    summary: "Reshaped Petpooja's kiosk ordering product from a standalone touchscreen UI into a fully integrated self-ordering platform. Redesigned the intraserver order API layer to handle kiosk-originated orders identically to POS and online orders. Kiosk order throughput at QSR pilots 2.3x counter throughput per terminal during peak. Average order value 18% higher than counter orders.",
+    summary: "Reshaped the kiosk ordering product from a standalone touchscreen UI into a fully integrated self-ordering platform. Redesigned the intraserver order API layer to handle kiosk-originated orders identically to POS and online orders. Kiosk order throughput at QSR pilots 2.3x counter throughput per terminal during peak. Average order value 18% higher than counter orders.",
     metrics: [
       { label: "Peak throughput vs counter", value: "2.3x per terminal" },
       { label: "Average order value lift", value: "+18%" },
@@ -399,7 +399,7 @@ const caseStudies: CaseStudy[] = [
     sections: [
       {
         title: "The Problem",
-        content: "Petpooja had an existing kiosk product, but it wasn't integrated — it operated as a silo. Kiosk orders were handled by a separate backend path that didn't share the order model, catalog state, or kitchen routing logic with the POS. This meant kiosk availability wasn't real-time (items sold out on POS still showed available on kiosk), kitchen staff received kiosk orders on a separate printed slip (not the KDS), and payment failures had no graceful recovery path.",
+        content: "The platform had an existing kiosk product, but it wasn't integrated — it operated as a silo. Kiosk orders were handled by a separate backend path that didn't share the order model, catalog state, or kitchen routing logic with the POS. This meant kiosk availability wasn't real-time (items sold out on POS still showed available on kiosk), kitchen staff received kiosk orders on a separate printed slip (not the KDS), and payment failures had no graceful recovery path.",
         bullets: [
           "Kiosk and POS ran separate order backends — catalog availability, tax calculation, and kitchen routing all duplicated and divergent",
           "Kitchen received kiosk orders as a printed slip separate from the KDS queue — staff managed two systems",
@@ -580,7 +580,7 @@ export default function CaseStudies() {
           <AnimatedSection>
             <div className="p-5 rounded-2xl border border-amber-500/20 bg-amber-50">
               <p className="text-amber-700/80 text-xs">
-                <strong className="text-amber-700">Note:</strong> Metrics reflect outcomes from Petpooja&apos;s restaurant technology products. Specific figures will be verified through reference conversations on request. No NDA-protected customer data is disclosed.
+                <strong className="text-amber-700">Note:</strong> Metrics reflect outcomes from the restaurant technology products described. Specific figures will be verified through reference conversations on request. No NDA-protected customer data is disclosed.
               </p>
             </div>
           </AnimatedSection>
